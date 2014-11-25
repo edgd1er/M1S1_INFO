@@ -1,0 +1,97 @@
+#include "mi_syscall.h"
+#include "mi_kernel.h"
+#include "hardware.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+
+
+static void  mmuhandler() 
+{
+    printf("tentative d’accès illégal à l’adresse %p\n", 
+           _in(MMU_FAULT_ADDR));
+}
+
+int init_hardware() 
+{
+    char *ptr;
+    unsigned int ncyl = 0, nsec = 0, sector_size = 0, status=0;
+	uint i;
+    char* hw_config;
+
+    hw_config = getenv("HW_CONFIG");
+    hw_config = hw_config ? hw_config : DEFAULT_HW_CONFIG;
+
+	/* Met le microprocesseur en mode maitre */
+	puts("Initialisation du matériel ...");
+	status = init_hardware(hw_config);
+	if (!status)
+		{printf("error in hardware initialization with %s\n", hw_config);}
+
+
+	/* Prépare les interruptions */
+	puts("Préparation des interruptions...");
+	for(i = 0; i < IRQ_VECTOR_SIZE; i++)
+	{
+		IRQVECTOR[i] = empty_it;
+	}
+
+	/* Vérifie la géométrie du disque */
+	puts("Vérification du disque ...");
+	/* Retourne la géométrie du disque dans HDA_DATAREGS */
+	_out(HDA_CMDREG, CMD_DSKINFO);
+
+	/* Lit la géométrie du disque octet par octet */
+	ncyl		= (_in(HDA_DATAREGS + 0) << 8) + _in(HDA_DATAREGS + 1);
+	nsec		= (_in(HDA_DATAREGS + 2) << 8) + _in(HDA_DATAREGS + 3);
+	sector_size	= (_in(HDA_DATAREGS + 4) << 8) + _in(HDA_DATAREGS + 5);
+
+	if (HDA_MAXCYLINDER != ncyl)
+	{
+		puts("Nombre de cylindres invalide à l'initialisation");
+		exit(INVALID_GEOMETRY);
+	}
+	
+	if (HDA_MAXSECTOR != nsec)
+	{
+		puts("Nombre de secteurs invalide à l'initialisation");
+		exit(INVALID_GEOMETRY);
+	}
+	
+	if (HDA_SECTORSIZE != sector_size)
+	{
+		puts("Taille des secteurs invalide à l'initialisation");
+		exit(INVALID_GEOMETRY);
+	}
+
+	puts("Initialisation terminée\n");
+}
+    ... /* init_hardware() */
+    IRQVECTOR[MMU_IRQ] = mmuhandler;
+    _mask(1);
+
+}
+
+
+
+static void switch_to_process0(void) 
+{
+    current_process = 0;
+    _out(MMU_CMD, MMU_RESET);
+}
+
+static void
+switch_to_process1(void) 
+{
+    current_process = 1;
+    _out(MMU_CMD, MMU_RESET);
+}
+
+static int ppage_of_vaddr(int process, unsigned vaddr){
+unsigned int vpage;
+if ((vaddr> VM_MEMORY) and (vaddr< VM_MEMORY+VM_SIZE -1)){} else {fprintf(stderr,"Erreur: l'adresse mémoire n'est pas dans l'espace mémoire virtuel.
+
+",);}
+
+
+}

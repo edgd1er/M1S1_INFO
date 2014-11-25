@@ -1,0 +1,22 @@
+CC=gcc
+#CFLAGS=-ggdb -W -Wall -ansi  -m32 -pedantic -I.
+CFLAGS=-ggdb -W -Wall -m32 -pedantic -I.
+LDFLAGS=
+EXEC=pingpong
+DEPS = libcontext.h hw.h
+OBJ= pingpong.o libcontext.o hw.o
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+all: $(EXEC)
+
+pingpong: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)
+
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf $(EXEC)

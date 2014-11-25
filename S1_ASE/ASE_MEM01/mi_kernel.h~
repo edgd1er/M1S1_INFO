@@ -1,0 +1,32 @@
+#define PAGESIZE 4096
+#define VM_PAGES 4096
+#define VM_SIZE PAGESIZE*VM_PAGES
+#define N 254
+
+#define MMU_RESET 0xD5
+
+#define MMU_IRQ	13
+#define MMU_CMD	0x66
+#define MMU_FAULT_ADDR 0xCD
+#define TLB_ADD_ENTRY 0xCE
+#define TLB_DEL_ENTRY 0xDE
+#define DEFAULT_HW_CONFIG "etc/hardware.ini"
+
+struct tlb_entry_s {
+	unsigned unused: 8;
+	unsigned vpage: 12;
+	unsigned ppage: 8;
+	unsigned access: 3;
+	unsigned is_active: 1;
+};
+
+
+unsigned int current_process;
+
+int init_hardware();
+static void  mmuhandler();
+static void switch_to_process0(void);
+static void switch_to_process1(void);
+static int ppage_of_vaddr(int process, unsigned vaddr);
+
+
