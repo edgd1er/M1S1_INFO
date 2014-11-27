@@ -2,6 +2,7 @@
 #include "mi_syscall.h"
 #include "mi_kernel.h"
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 
 
@@ -37,5 +38,6 @@ int inituser()
     _int(17);
     res = sum(ptr);
     printf("Resultat processus 1 : %d\n",res);
+    return EXIT_SUCCESS;
 }
 
