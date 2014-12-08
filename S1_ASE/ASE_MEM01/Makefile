@@ -5,7 +5,7 @@ ROOTDIR=/home/enseign/ASE
 ROOTDIR=.
 
 CC	= gcc
-CFLAGS	= -Wall -ansi -pedantic
+CFLAGS	= -Wall -ansi -pedantic -m32
 LIBDIR  = -L$(ROOTDIR)/lib
 INC = /usr/include $(ROOTDIR)/include
 INCDIR  = $(foreach d, $(INC), -I$d)

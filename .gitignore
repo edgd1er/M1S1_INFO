@@ -48,7 +48,7 @@ S1_ASE/ASE_CHAPITRE*
 S1_ASE/ASE_DD01_exemple
 S1_ASE/mod/
 S1_ACT/2014-C*
-S1_ACT/ACT_TP1
+S1_ACT/ACT_TP1git add 
 S1_ACT/ACT_TP2
 Remb_transport/
 L3
@@ -59,3 +59,5 @@ Styles_de_communication.JPG
 mount_fil.sh
 
 *.class
+*.*
+Copie*

@@ -30,9 +30,9 @@ struct tlb_entry_s {
 
 unsigned int current_process;
 
-static void mmuhandler();
-static void switch_to_process0(void);
-static void switch_to_process1(void);
-static int ppage_of_vaddr(int process, unsigned vaddr);
+void mmuhandler();
+void switch_to_process0(void);
+void switch_to_process1(void);
+int ppage_of_vaddr(int process, unsigned vaddr);
 
-
+int inituser();

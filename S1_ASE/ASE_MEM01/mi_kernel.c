@@ -2,12 +2,13 @@
 #include "mi_syscall.h"
 #include "mi_kernel.h"
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 
 
 static void empty_it() { return; }
 
-static void mmuhandler(){
+void mmuhandler(){
   int vaddr;
   int ppage;
   struct tlb_entry_s tlbe;
@@ -29,8 +30,7 @@ static void mmuhandler(){
 
 int main(int argc, char **argv) 
 {
-    char *ptr;
-    unsigned int ncyl = 0, nsec = 0, sector_size = 0, status=0;
+    unsigned int status=0;
     unsigned int i;
     char* hw_config;
 
@@ -65,20 +65,19 @@ int main(int argc, char **argv)
 
 
 
-static void switch_to_process0(void) 
+void switch_to_process0(void) 
 {
     current_process = 0;
     _out(MMU_CMD, MMU_RESET);
 }
 
-static void
-switch_to_process1(void) 
+void switch_to_process1(void) 
 {
     current_process = 1;
     _out(MMU_CMD, MMU_RESET);
 }
 
-static int ppage_of_vaddr(int process, unsigned vaddr){
+int ppage_of_vaddr(int process, unsigned vaddr){
 	unsigned int vpage;
 	if ( vaddr > VMEM_END || vaddr < VMEM_BEGIN ) return -1;
 

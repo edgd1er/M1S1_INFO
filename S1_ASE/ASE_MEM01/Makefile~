@@ -7,7 +7,8 @@ ROOTDIR=.
 CC	= gcc
 CFLAGS	= -Wall -ansi -pedantic
 LIBDIR  = -L$(ROOTDIR)/lib
-INCDIR  = -I$(ROOTDIR)/include
+INC = /usr/include $(ROOTDIR)/include
+INCDIR  = $(foreach d, $(INC), -I$d)
 LIBS    = -lhardware
 
 ###------------------------------
@@ -30,8 +31,8 @@ test: mi_kernel.o mi_user.o
 ### #include dependences 
 ###------------------------------------------------------------
 # you may fill these lines with "make depend"
-mi_user.o: mi_user.c  hardware.h
-mi_kernel.o: mi_kernel.c  hardware.h
+mi_kernel.o: mi_kernel.c include/mi_syscall.h include/mi_kernel.h include/hardware.h
+mi_user.o: mi_user.c 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< $(INCDIR)
 
