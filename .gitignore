@@ -62,3 +62,10 @@ mount_fil.sh
 
 *.class
 Copie*
+
+# eclipse
+.settings
+.cproject
+.project
+.classpath
+Debug
