@@ -11,8 +11,6 @@
 #include <signal.h>
 #include <stdio.h>
 #include <assert.h>
-#include <signal.h>
-#include <sys/types.h>
 
 #include "hw.h"
 
@@ -40,7 +38,7 @@ start_hw()
 	sigemptyset(&sa.sa_mask);
 	sa.sa_handler = do_timer_interrupt;
 	sa.sa_flags = SA_RESTART | SA_NODEFER;
-	sigaction(SIGALRM, &sa, (struct sigaction*)0);
+	sigaction(SIGALRM, &sa, (struct sigaction *)0);
     }
 
     {

@@ -1,0 +1,2 @@
+#define SYSCALL_SWITCH_TO_0 16
+#define SYSCALL_SWITCH_TO_1 17

@@ -26,6 +26,7 @@ struct ctx_s {
 struct sem_s {
 	int cpt;
 	struct ctx_s* context;
+	char* name;
 };
 
 int create_ctx(int stacksize,func_t f, void *args);
@@ -34,7 +35,7 @@ void switch_to_ctx(struct ctx_s *ctx);
 void yield();
 void start_sched();
 void remove_next();
-void sem_init(struct sem_s *sem , unsigned int val);
+void sem_init(struct sem_s *sem , unsigned int val,char* name);
 void sem_up(struct sem_s *sem);
 void sem_down(struct sem_s *sem);
 void changer();

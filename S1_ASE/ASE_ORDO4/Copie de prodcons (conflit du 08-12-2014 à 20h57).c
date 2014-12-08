@@ -41,7 +41,9 @@ int main(void) {
 
 void producteur(void) {
 	struct objet_t objet;
-	while (1) {
+	int i;
+		for(i=0;i<70;i++)	
+	 {
 		produire_objet(&objet);
 		printf("\nProducteur=>tampon[%d]=%d",idx,objet.mytab);
 		sem_down( &vide); /* dec. nb places libres */
@@ -59,7 +61,9 @@ void producteur(void) {
 
 void consommateur(void) {
 	struct objet_t objet;
-	while (1) {
+	int i;
+	for(i=0;i<50;i++)
+ {
 		printf("\nConsommateur=>tampon[%d]=%d",idx,objet.mytab);
 		sem_down(&plein);
 		/* entree dans la section critique */

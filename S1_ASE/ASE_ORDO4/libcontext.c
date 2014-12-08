@@ -9,14 +9,14 @@
 #define MAGIC 0xDEADBEEF
 #define RETURN_SUCCESS 0
 #define RETURN_FAILURE 1
-
+#define DEBUG 0
 char *statestrings[] = { "TEST", "RREADY", "STARTED", "TTERMINATED", "STOPPED" };
 
 /*sauvegarde du contexte dans la variable ctx */
 #define  save_to_ctx(ctx) {\
 		/* _XX__ appel via une macro */\
-		__asm__("mov %%esp,%0\n\t "\
-				"mov %%ebp,%1"\
+		__asm__("movl %%esp,%0" "\n\t"\
+				"movl %%ebp,%1"\
 				:"=r"(ctx->ctx_esp),\
 				 "=r"(ctx->ctx_ebp)\
 				 :\
@@ -28,7 +28,7 @@ char *statestrings[] = { "TEST", "RREADY", "STARTED", "TTERMINATED", "STOPPED" }
 /* dans les registres du processeur */
 #define load_ctx(ctx) {\
 		/* _XX__ appel via une macro */\
-		__asm__("movl %0,%%esp\n\t "\
+		__asm__("movl %0,%%esp" "\n\t"\
 				"movl %1,%%ebp"\
 				:\
 				 :"r"(ctx->ctx_esp),\
@@ -58,10 +58,14 @@ int init_ctx(struct ctx_s* ctx, int stacksize, func_t f, void* args) {
 	/* zone memoire de la pile */
 	ctx->ctx_zone = malloc(stacksize);
 	/* definition de esp et ebp */
-	ctx->ctx_esp = (unsigned int*) (ctx->ctx_zone) + stacksize;
-	ctx->ctx_ebp = ctx->ctx_esp;
+	ctx->ctx_esp = (unsigned int*) (ctx->ctx_zone) + stacksize -4 ;
+	ctx->ctx_ebp = (unsigned int*) (ctx->ctx_zone) + stacksize -4 ;
 	/* par defaut, marqueur de l'état de la fonction */
 	ctx->ctx_started = 0;
+	ctx->ctx_status= RREADY;
+	if (DEBUG)
+		printf("\ninit_ctx: %p, status: %s ebp: %p esp: %p", (void*) ctx,
+					statestrings[ctx->ctx_status],(void *)ctx->ctx_ebp,(void *)ctx->ctx_esp );
 
 	if (!ctx->ctx_zone)
 		return RETURN_FAILURE;
@@ -72,11 +76,22 @@ int init_ctx(struct ctx_s* ctx, int stacksize, func_t f, void* args) {
 void switch_to_ctx(struct ctx_s *ctx) {
 	/*static struct ctx_s *temp_ctx;
 	 temp_ctx= ctx;*/
+	if (DEBUG)
+	fprintf(stdout,"\nSwitch_to_ctx");
 
 	/*sauvegarde du contexte courant.*/
 	if (current_ctx) {
+		if (DEBUG)
+		printf("\nSave into Current_ctx context =%p", (void*) current_ctx);
 		irq_disable();
 		save_to_ctx(current_ctx);
+		irq_enable();
+	}else {
+		/* ctx_ring = (struct ctx_s*)malloc(sizeof(struct ctx_s)); */
+		if (DEBUG)
+		printf("\nSave into Ring context =%p", (void*) ctx_ring);
+		irq_disable();
+		/*save_to_ctx(ctx_ring);*/
 		irq_enable();
 	}
 
@@ -88,10 +103,13 @@ void switch_to_ctx(struct ctx_s *ctx) {
 	/*1er demarrage de la tache*/
 	if ((ctx->ctx_status == RREADY) && (ctx->ctx_magic == MAGIC)) {
 		/*protection contre les interruptions pdt le changement de pile*/
+		if (DEBUG)
+		printf("\nNew task started, was ready=%p", (void*) ctx);
 		irq_disable();
 		ctx->ctx_status = STARTED;
+		ctx->ctx_started = 1;
 		current_ctx = ctx;
-		//load_ctx(ctx);
+		load_ctx(ctx);
 		irq_enable();
 		/*lancement de la fonction*/
 		current_ctx->ctx_func(current_ctx->ctx_arg);
@@ -109,11 +127,10 @@ void switch_to_ctx(struct ctx_s *ctx) {
 
 	/* le nouveau contexte devient l'actuel */
 	current_ctx = ctx;
+	irq_enable();
 
 	/* charge le nouveau contexte */
 	load_ctx(ctx);
-	irq_enable();
-
 }
 
 /* creation d'un nouveau contexte et ajout a l'ordonnanceur */
@@ -153,14 +170,17 @@ int create_ctx(int stacksize, func_t f, void *args) {
 void yield() {
 	struct ctx_s* inter_ctx;
 	struct ctx_s* ctx;
+	if (DEBUG)
+	fprintf(stdout,"\nYield()");
 	if (current_ctx != NULL) {
 		/* passage au contexte suivant non bloqué */
-		printf("\n-current_ctx: %p, status: %s\n", (void*) current_ctx,
-				statestrings[current_ctx->ctx_status]);
-		printf("-current_ctx+1: %p, status: %s\n",
+		if (DEBUG){
+		printf("\nyield-current_ctx: %p, status: %s ebp: %p esp: %p\n", (void*) current_ctx,
+				statestrings[current_ctx->ctx_status],(void *)current_ctx->ctx_ebp,(void *)current_ctx->ctx_esp );
+		printf("yield-current_ctx+1: %p, status: %s ebp:%p esp:%p\n",
 				(void*) current_ctx->ctx_next,
-				statestrings[current_ctx->ctx_next->ctx_status]);
-
+				statestrings[current_ctx->ctx_next->ctx_status],(void *)current_ctx->ctx_ebp,(void *)current_ctx->ctx_esp );
+		}
 		ctx = current_ctx->ctx_next;
 		while (ctx->ctx_status == STOPPED) {
 			if (inter_ctx == NULL) {
@@ -179,13 +199,21 @@ void yield() {
 						statestrings[ctx->ctx_next->ctx_status],ctx->ctx_next->ctx_status);
 				exit(RETURN_FAILURE);
 			}
-		} // passage au prochain context non stoppé
+		} /* passage au prochain context non stoppé */
+		if (DEBUG)
+		fprintf(stdout,"\nYield:switch_to_ctx(ctx)=%p;", (void*) ctx);
 		switch_to_ctx(ctx);
 	} else {
-		//aucun current_ctx
+		/* aucun current_ctx */
+		if (DEBUG)
+		fprintf(stdout,"\nYield: aucun current_ctx switch_to_ctx(ctx_ring)=%p;", (void*) ctx_ring);
+		save_to_ctx(ctx_ring);
 		switch_to_ctx(ctx_ring);
 	}
 }
+
+
+
 
 /* scheduler: chgt de contexte par interruption */
 void start_sched() {
@@ -209,77 +237,76 @@ void remove_next(struct ctx_s *ctx) {
 	}
 
 	/*le prochain contexte sera le prochain, prochain*/
-	ctx->ctx_next = ctx;
-	ctx->ctx_next = ctx->ctx_next->ctx_next;
 	free(ctx->ctx_next->ctx_zone);
 	free(ctx->ctx_next);
+
+	ctx->ctx_next = ctx;
+	ctx->ctx_next = ctx->ctx_next->ctx_next;
+
 
 	irq_enable();
 }
 
 /* Init du semaphore avec le nb de ressources val */
-void sem_init(struct sem_s* sem, unsigned int val) {
-	sem = malloc(sizeof(struct sem_s));
+void sem_init(struct sem_s* sem, unsigned int val,char* name) {
 	sem->cpt = val;
 	sem->context = NULL;
+	sem->name =name;
 }
 
 /* consommateur de ressources */
 void sem_down(struct sem_s* sem) {
 	/* code critique = modification de la liste des contextes bloqués */
-	printf("-sem_down: %d (current: %p, next ctx: %p)\n", sem->cpt - 1,
-			(void*) current_ctx->ctx_esp,
-			(void*) current_ctx->ctx_next->ctx_esp);
 	irq_disable();
 	sem->cpt--;
 	if (sem->cpt < 0) {
 		if (current_ctx->ctx_next == current_ctx) {
-			printf("sortie a cause d un interblocage (sem down) \n");
-			exit(-1);
+			printf("\nSortie a cause d un interblocage (sem down)");
+			exit(EXIT_FAILURE);
 		}
 		/* pas de ressources, alors le context prend l'etat 
 		 * STOPPED, le context courant est ajouté a la liste de context bloqué
 		 * dans le semaphore
 		 */
 		current_ctx->ctx_status = STOPPED;
-		sem->context = current_ctx;
+		fprintf(stdout,"\nSem_Down:%s Stop: %p",sem->name,(void*)current_ctx);
 		current_ctx->sem_next = sem->context;
+		sem->context = current_ctx;
+
 		/* fin de code critique, cas ou cpt< 0*/
 		irq_enable();
-		/* pas d'interruption dans les semaphores */
-		/*yield();*/
-	} else {
-		/* fin de code critique, cas ou cpt> 0*/
-		irq_enable();
+		/* process actuel stoppe, passage au suivant */
+		yield();
 	}
+	/* fin de code critique, cas ou cpt> 0*/
+		irq_enable();
 }
 
 /* producteur de ressources */
 void sem_up(struct sem_s* sem) {
-	struct ctx_s * temp_sem;
-	/*temp_sem=malloc(sizeof(struct ctx_s));*/
+	struct ctx_s * temp_ctx;
+
 	/* code critique = modification de la liste des contextes bloqués */
-	printf("-sem_up: %d (current: %p, next ctx: %p)\n", sem->cpt + 1,
-			(void*) current_ctx->ctx_esp,
-			(void*) current_ctx->ctx_next->ctx_esp);
 	irq_disable();
 	sem->cpt++;
 	if (sem->cpt <= 0) {
+		temp_ctx=malloc(sizeof(struct ctx_s));
 		/* permet a la tache bloqué de repartir*/
 		sem->context->ctx_status = STARTED;
+		fprintf(stdout,"\nSem_up: %s Started: %p",sem->name,(void*)sem->context);
 		/* sauvegarde du contexte n+1 */
-		temp_sem = sem->context->sem_next;
+		temp_ctx = sem->context->sem_next;
 		/* suppression de l'appartenance au semaphore*/
 		sem->context->sem_next = NULL;
 		free(sem->context->sem_next);
 		/* ajout du context n+1 suivant dans la liste du semaphore*/
-		sem->context = temp_sem;
-
+		sem->context = temp_ctx;
 	}
 	irq_enable();
+
 }
 
 void changer() {
-	printf(">>> on change de contexte !!! <<<\n");
+	printf("\n>>> on change de contexte !!! <<<\n");
 	yield();
 }

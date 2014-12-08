@@ -23,8 +23,8 @@ int main()
 	create_ctx(16384,(func_t) f_pong2, NULL);
 
 	/* switch_to_ctx(&ctx_ping); */
-	yield();
-	/* start_sched();*/
+	/*yield();*/
+	start_sched();
 	exit(EXIT_SUCCESS);
 }
 
