@@ -1,0 +1,69 @@
+#ROOTDIR=/home/enseign/ASE
+ROOTDIR=/home/m1/dubiez/Documents/ASE_DD03
+#ROOTDIR=/home/user/Documents/FORMATION/S1_ASE/ASE_DD03
+#ROOTDIR=/media/3072-CBDC/_MS1/ASE/ASE_DD01
+ROOTDIR=.
+
+CC	= gcc
+CFLAGS	= -Wall -ansi -pedantic -m32
+CFLAGS  += -g -std=iso9899:1999
+LIBDIR  = -L$(ROOTDIR)/lib
+#LIBDIR  = -L.
+#INCDIR  = -I$(ROOTDIR)/include
+#INCDIR  = -I.
+LIBS    = -lhardware
+
+SRC		= $(wildcard *.c)
+OBJ		= $(SRC:.c=.o)
+BINARIES= dmps frmt mkhd vm dvol mkvol mknfs dfs
+
+all: $(BINARIES)
+
+dfs: dfs.o super.o mbr.o drive.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+
+mknfs: mknfs.o super.o mbr.o drive.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+
+mkvol: mkvol.o mbr.o drive.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+
+dvol: dvol.o mbr.o drive.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+
+vm: vm.o mbr.o drive.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+
+mbr: mbr.o drive.o 
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+
+dmps: dmps.o drive.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+
+frmt: frmt.o drive.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+
+mkhd: mkhd.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+
+dfs.o: super.h drive.h mbr.h
+mknfs.o: super.h drive.h mbr.h
+super.o: super.h mbr.h drive.h hardware.h
+
+dvol.o: mbr.h drive.h
+drive.o: drive.h hardware.h
+dmps.o: drive.h hardware.h
+frmt.o: drive.h hardware.h
+vm.o:   drive.h hardware.h
+
+mbr.o: mbr.h drive.h hardware.h
+
+
+%.o: %.c
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+.PHONY: clean realclean
+clean:
+	$(RM) *.o $(BINARIES)
+realclean: clean 
+	$(RM) vdiskA.bin vdiskB.bin
