@@ -229,6 +229,7 @@ public class Donnees {
 	public boolean loadDonneeSum(String file) {
 
 		strFile = file;
+		int sum=0;
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					new FileInputStream(file), "UTF8"));
@@ -240,9 +241,10 @@ public class Donnees {
 
 				/* Lecture des objets */
 				px = new int[nbobjets+1];
-				for (int i = 0; i < nbobjets; i++) {
+				for (int i = 1; i <= nbobjets; i++) {
 					temp = in.readLine();
 					px[i] = Integer.parseInt(temp);
+					sum+= px[i];
 				}
 				
 				/* definition de k nb de sacs */
@@ -252,8 +254,25 @@ public class Donnees {
 				temp = in.readLine();
 				c = Integer.parseInt(temp);
 
-				/* ajout de l'objet qui remplira un sac a lui tout seul */
-				px[nbobjets++] = c;
+				/* ajout de l'objet qui completera le second sac  */
+				/* si 2c > sum: ens1 + (ens2 +x) = 2c */
+				nbobjets++;
+				if (2*c-sum>0){
+				px[0] = 2*c-sum;}
+				else/* sum>2c  */
+					/* on cree un espace pour agrandir le sac 
+					 * et basculer l'objet x dans le second sac */
+					/* sum + objet inconnu = 2 (capacité sac +x) */
+					/* pour distinguer la solution, il conviendra de 
+					 * chercher l'objet X dans le certificat vérifiant
+					 * l'algo ( en le supprimant, on a la solution)
+					 * Certificat1:{4,6,10,4,}=24
+					 * Certificat2:{2,2,12,8,}=24 => sol 2,12,8 
+					 * */
+				{
+					this.c = c + sum -2*c;
+					px[0] = 2*c-sum;
+				}
 
 				
 				/* Lecture des commentaires */
