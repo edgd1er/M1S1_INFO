@@ -1,0 +1,36 @@
+CC=gcc
+#CFLAGS=-ggdb -W -Wall -ansi  -m32 -pedantic -I.
+CFLAGS=-ggdb -W -Wall -m32 -pedantic -I. -m32
+LDFLAGS=
+LIBDIR=
+LIBS=
+EXEC=prodcons pingpong
+
+SRC		= $(wildcard *.c)
+OBJ		= $(SRC:.c=.o)
+
+OBJECTS	= $(addsuffix .o,\
+	   prodcons pingpong libcontext )
+
+all: $(EXEC)
+
+prodcons: prodcons.o libcontext.o
+pingpong: pingpong.o libtontext.o
+
+ %: %.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBDIR) $(LIBS)
+ 
+###------------------------------
+### #include dependences 
+###------------------------------------------------------------
+pingpong.o: pingpong.c libcontext.h hw.h
+prodcons.o: prodcons.c libcontext.h hw.h
+libcontext.o: 
+ %.o: %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf $(EXEC)
