@@ -1,0 +1,75 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+#documents
+*.odt
+*.doc
+*~
+*.zip
+*.db
+*.pdf
+Pres_Ingress.*
+*.fuse*
+
+S1_ASE/ASE_DD01
+S1_ASE/ASE_DD02
+S1_ASE/ASE_DD03
+S1_ASE/ASE_ORDO1
+S1_ASE/ASE_ORDO2
+S1_ASE/ASE_ORDO3
+S1_ASE/ASE_ORDO4C
+S1_ASE/ASE_ORDO4C1
+S1_ASE/ASE_CHAPITRE*
+S1_ASE/ASE_DD01_exemple
+S1_ASE/TP4
+S1_ASE/mod/
+S1_ACT/2014-C*
+S1_ACT/ACT_TP1
+S1_ACT/ACT_TP2
+S1_ACT/propriete-np-master/
+S1_ACT/Resultsats*
+Remb_transport/
+L3
+sudes
+Debug/*
+
+simplex*
+exercices
+Styles_de_communication.JPG
+mount_fil.sh
+
+*.class
+Copie*
+
+# eclipse
+.settings
+.cproject
+.project
+.classpath
+Debug
