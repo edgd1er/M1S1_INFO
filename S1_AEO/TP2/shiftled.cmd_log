@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan6 -refsym shiftled /home/m1/dubiez/Documents/AEO_TP/TP2/shiftled.sch /home/m1/dubiez/Documents/AEO_TP/TP2/shiftled.sym 
+sch2sym -intstyle ise -family spartan6 -refsym shiftled /home/m1/dubiez/Documents/AEO_TP/TP2/shiftled.sch /home/m1/dubiez/Documents/AEO_TP/TP2/shiftled.sym 
+sch2sym -intstyle ise -family spartan6 -refsym shiftled F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/shiftled.sch F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/shiftled.sym 
+sch2hdl -sympath F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl shiftled_drc.vhf -w F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/shiftled.sch 

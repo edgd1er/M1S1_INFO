@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "/home/m1/xuc/Documents/AEO/TP1/TP1/toplevel.xst" -ofn "/home/m1/xuc/Documents/AEO/TP1/TP1/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_tp1.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_tp1.ucf 
+xst -intstyle ise -ifn "/home/m1/xuc/Documents/AEO/TP1/TP1/toplevel.xst" -ofn "/home/m1/xuc/Documents/AEO/TP1/TP1/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_tp1.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_tp1.ucf 
+xst -intstyle ise -ifn "/home/m1/xuc/Documents/AEO/TP1/TP1/toplevel.xst" -ofn "/home/m1/xuc/Documents/AEO/TP1/TP1/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_tp1.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_tp1.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 

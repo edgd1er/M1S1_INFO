@@ -1,0 +1,4 @@
+vhdl work "toplevel.vhf"
+vhdl work "fsm.vhd"
+vhdl work "clkdiv.vhf"
+vhdl work "controleur.vhf"

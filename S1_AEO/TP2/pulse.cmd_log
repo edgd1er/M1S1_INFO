@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym pulse /home/m1/joly/Documents/AEO/TP2/pulse.sch /home/m1/joly/Documents/AEO/TP2/pulse.sym 

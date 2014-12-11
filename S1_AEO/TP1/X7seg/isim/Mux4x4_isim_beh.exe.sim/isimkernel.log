@@ -1,0 +1,29 @@
+Command line:
+   Mux4x4_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  57275
+
+Fri Sep 26 15:35:26 2014
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 115.54 Meg
+
+ Total Signals          : 64
+ Total Nets             : 47
+ Total Signal Drivers   : 5
+ Total Blocks           : 9
+ Total Primitive Blocks : 8
+ Total Processes        : 5
+ Total Traceable Variables  : 13
+ Total Scalar Nets and Variables : 530
+Total Line Count : 37
+
+ Total Simulation Time: 0.06 sec
+
+ Current Memory Usage: 122.888 Meg
+
+Fri Sep 26 15:39:33 2014
+

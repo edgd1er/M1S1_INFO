@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="7">
+	<FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+		<Filter Type="Srcs"/>
+		<File Path="/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.vhd">
+		</File>
+		<File Path="/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/controleur.vhf">
+			<FileInfo SFType="VHDL"/>
+		</File>
+		<File Path="/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/clkdiv.vhf">
+			<FileInfo SFType="VHDL"/>
+		</File>
+		<File Path="/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.vhf">
+			<FileInfo SFType="VHDL"/>
+		</File>
+		<Config>
+			<Option Name="DesignMode" Val="RTL"/>
+			<Option Name="TopModule" Val="toplevel"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

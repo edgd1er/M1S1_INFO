@@ -1,0 +1,4 @@
+vhdl work "X7seg.vhd"
+vhdl work "Mux4x4.vhf"
+vhdl work "enable190.vhf"
+vhdl work "afficheur.vhf"

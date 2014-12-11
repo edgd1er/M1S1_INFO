@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym Mux4x4 /home/m1/xuc/Documents/AEO/TP1/X7seg/Mux4x4.sch /home/m1/xuc/Documents/AEO/TP1/X7seg/Mux4x4.sym 

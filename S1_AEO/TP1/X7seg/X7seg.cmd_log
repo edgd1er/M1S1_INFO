@@ -1,0 +1,5 @@
+vhdtdtfi -lib work X7seg.vhd -prj X7seg -o X7seg.spl -module X7seg -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 X7seg.spl /home/m1/xuc/Documents/AEO/TP1/X7seg/X7seg.sym 
+xst -intstyle ise -ifn "/home/m1/xuc/Documents/AEO/TP1/X7seg/X7seg.xst" -ofn "/home/m1/xuc/Documents/AEO/TP1/X7seg/X7seg.syr" 
+vhdtdtfi -lib work X7seg.vhd -prj X7seg -o X7seg.spl -module X7seg -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 X7seg.spl /home/m1/xuc/Documents/AEO/TP1/X7seg/X7seg.sym 

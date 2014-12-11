@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 770: Net &lt;<arg fmt="%s" index="1">XLXI_1_CLR_openSignal</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 771: Net &lt;<arg fmt="%s" index="1">XLXI_2_CLR_openSignal</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 885: Net &lt;<arg fmt="%s" index="1">XLXI_8_CLR_openSignal</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 140: <arg fmt="%s" index="1">add</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 142: <arg fmt="%s" index="1">b</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 145: <arg fmt="%s" index="1">b</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 1126: Net &lt;<arg fmt="%s" index="1">E190</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 1129: Net &lt;<arg fmt="%s" index="1">state</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 1130: Net &lt;<arg fmt="%s" index="1">value[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 1147: Net &lt;<arg fmt="%s" index="1">XLXI_15_CLR_openSignal</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\toplevel2.vhf" Line 1148: Net &lt;<arg fmt="%s" index="1">XLXI_39_R_openSignal</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">1346</arg>: Output port &lt;<arg fmt="%s" index="3">OFL</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_39</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">value&lt;15:8&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">E190</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">state</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_15_CLR_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_39_R_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">822</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">822</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">822</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">822</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">822</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">833</arg>: Output port &lt;<arg fmt="%s" index="3">Q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">833</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_1_CLR_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_2_CLR_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">935</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_8</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/documents_utilisateurs/francois/_hubic/documents/formation/s1_aeo/aeo_tp/tp2/toplevel2.vhf</arg>&quot; line <arg fmt="%d" index="2">935</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_8</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_8_CLR_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="3031" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_sevenseg</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="old" >Multi-source in Unit &lt;<arg fmt="%s" index="1">toplevel2</arg>&gt; on signal &lt;<arg fmt="%s" index="2">clk100</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+</messages>
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/m1/xuc/Documents/AEO/TP1/TP1/toplevel.ncd
+OUTFILE=/home/m1/xuc/Documents/AEO/TP1/TP1/toplevel.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/m1/xuc/Documents/AEO/TP1/TP1
+LICENSE=WebPack
+USER_INFO=0_0_579

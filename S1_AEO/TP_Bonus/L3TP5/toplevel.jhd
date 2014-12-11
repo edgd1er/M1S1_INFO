@@ -1,0 +1,5 @@
+MODULE toplevel
+	SUBMODULE clkdiv
+		INSTANCE XLXI_1
+	SUBMODULE controleur
+		INSTANCE XLXI_13

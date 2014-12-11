@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drawing version="7">
+    <attr value="spartan6" name="DeviceFamilyName">
+        <trait delete="all:0" />
+        <trait editname="all:0" />
+        <trait edittrait="all:0" />
+    </attr>
+    <netlist>
+        <signal name="XLXN_7(7:0)">
+            <attr value="SW7" name="LOC">
+                <trait verilog="all:0 wsynth:1" />
+                <trait vhdl="all:0 wa:1 wd:1" />
+            </attr>
+        </signal>
+        <signal name="XLXN_7" />
+        <signal name="XLXN_14(7:0)" />
+        <signal name="XLXN_15(7:0)" />
+        <port polarity="Input" name="XLXN_7(7:0)" />
+        <port polarity="Input" name="XLXN_7" />
+        <blockdef name="obuf8">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+            <line x2="64" y1="0" y2="-64" x1="64" />
+            <line x2="64" y1="-32" y2="0" x1="128" />
+            <line x2="128" y1="-64" y2="-32" x1="64" />
+            <line x2="128" y1="-32" y2="-32" x1="224" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <rect width="96" x="128" y="-44" height="24" />
+        </blockdef>
+        <blockdef name="ibuf8">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <rect width="96" x="128" y="-44" height="24" />
+            <line x2="128" y1="-32" y2="-32" x1="224" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="64" y1="0" y2="-64" x1="64" />
+            <line x2="64" y1="-32" y2="0" x1="128" />
+            <line x2="128" y1="-64" y2="-32" x1="64" />
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+        </blockdef>
+        <block symbolname="obuf8" name="XLXI_1">
+            <blockpin signalname="XLXN_14(7:0)" name="I(7:0)" />
+            <blockpin signalname="XLXN_15(7:0)" name="O(7:0)" />
+        </block>
+        <block symbolname="ibuf8" name="XLXI_3">
+            <blockpin signalname="XLXN_7" name="I(7:0)" />
+            <blockpin signalname="XLXN_14(7:0)" name="O(7:0)" />
+        </block>
+    </netlist>
+    <sheet sheetnum="1" width="3520" height="2720">
+        <branch name="XLXN_7">
+            <wire x2="64" y1="160" y2="224" x1="64" />
+            <wire x2="64" y1="224" y2="240" x1="64" />
+        </branch>
+        <instance x="32" y="240" name="XLXI_3" orien="R90" />
+        <iomarker fontsize="28" x="64" y="160" name="XLXN_7" orien="R270" />
+        <instance x="800" y="672" name="XLXI_1" orien="R90" />
+        <branch name="XLXN_14(7:0)">
+            <wire x2="64" y1="464" y2="528" x1="64" />
+            <wire x2="64" y1="528" y2="1104" x1="64" />
+            <wire x2="832" y1="528" y2="528" x1="64" />
+            <wire x2="1136" y1="528" y2="528" x1="832" />
+            <wire x2="832" y1="528" y2="672" x1="832" />
+        </branch>
+        <branch name="XLXN_15(7:0)">
+            <wire x2="832" y1="896" y2="1088" x1="832" />
+        </branch>
+    </sheet>
+</drawing>

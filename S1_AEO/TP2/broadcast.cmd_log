@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym broadcast /home/m1/dubiez/Documents/AEO_TP/TP2/broadcast.sch /home/m1/dubiez/Documents/AEO_TP/TP2/broadcast.sym 

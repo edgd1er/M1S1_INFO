@@ -1,0 +1,94 @@
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+sch2sym -intstyle ise -family spartan6 -w -refsym toplevel /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sym 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl toplevel_drc.vhf -w /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym toplevel /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sym 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl toplevel_drc.vhf -w /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sch 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+sch2sym -intstyle ise -family spartan6 -w -refsym toplevel /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym toplevel /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sym 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl toplevel.vhf -w /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sch 
+sch2vhdl -intstyle ise -family spartan6 -tionly -w /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sch toplevel.vhi 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+sch2sym -intstyle ise -family spartan6 -w -refsym toplevel /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.sym 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP_Bonus/L3TP5/toplevel.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP_Bonus/L3TP5/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 

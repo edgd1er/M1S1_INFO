@@ -1,0 +1,38 @@
+Running: /usr/local/Xilinx/12.4/ISE_DS/ISE/bin/lin/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/m1/xuc/Documents/AEO/TP1/X7seg/afficheur_isim_beh.exe -prj /home/m1/xuc/Documents/AEO/TP1/X7seg/afficheur_beh.prj work.afficheur 
+ISim M.81d (signature 0x141a37e9)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/m1/xuc/Documents/AEO/TP1/X7seg/X7seg.vhd" into library work
+Parsing VHDL file "/home/m1/xuc/Documents/AEO/TP1/X7seg/Mux4x4.vhf" into library work
+Parsing VHDL file "/home/m1/xuc/Documents/AEO/TP1/X7seg/enable190.vhf" into library work
+Parsing VHDL file "/home/m1/xuc/Documents/AEO/TP1/X7seg/afficheur.vhf" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 36832 KB
+Fuse CPU Usage: 200 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package numeric_std from library ieee
+Using precompiled package std_logic_arith from library ieee
+Using precompiled package std_logic_unsigned from library ieee
+Compiling package vcomponents
+Compiling architecture m4_1e_hxilinx_afficheur_v of entity m4_1e_hxilinx_afficheur [m4_1e_hxilinx_afficheur_default]
+Compiling architecture vcc_v of entity vcc [vcc_default]
+Compiling architecture behavioral of entity mux4x4_muser_afficheur [mux4x4_muser_afficheur_default]
+Compiling architecture behavioral of entity x7seg [x7seg_default]
+Compiling architecture behavioral of entity cb2ce_hxilinx_afficheur [cb2ce_hxilinx_afficheur_default]
+Compiling architecture behavioral of entity cb16ce_hxilinx_afficheur [cb16ce_hxilinx_afficheur_default]
+Compiling architecture behavioral of entity cb4ce_hxilinx_afficheur [cb4ce_hxilinx_afficheur_default]
+Compiling architecture fd_v of entity fd [\FD('0')\]
+Compiling architecture inv_v of entity inv [inv_default]
+Compiling architecture nor2_v of entity nor2 [nor2_default]
+Compiling architecture behavioral of entity enable190_muser_afficheur [enable190_muser_afficheur_defaul...]
+Compiling architecture behavioral of entity afficheur
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 29 VHDL Units
+Built simulation executable /home/m1/xuc/Documents/AEO/TP1/X7seg/afficheur_isim_beh.exe
+Fuse Memory Usage: 77836 KB
+Fuse CPU Usage: 240 ms
+GCC CPU Usage: 450 ms

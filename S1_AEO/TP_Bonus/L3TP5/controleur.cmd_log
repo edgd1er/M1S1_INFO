@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym controleur /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/controleur.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/controleur.sym 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl controleur_drc.vhf -w /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/controleur.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym controleur /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/controleur.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/controleur.sym 

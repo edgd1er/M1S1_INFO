@@ -1,0 +1,26 @@
+F:\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\TP5>"c:\Program Files\Java\jdk1.7.0_05\bin\java.exe
+"  -jar  g:\ANDROID\jHomade-2.0.1\jHomade-2.0.1.jar TP5.hmd
+jHomade V5
+----------
+
+  Loading F:\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\TP5\TP5.hmd
+Homade BIN
+----------
+
+  0c00  0000  000c  ffff
+  201f  a402  8804  8003
+  a002  03fb  1400  ffff
+  1000  0000  0004  1c00
+  ffff  ffff  ffff  ffff
+  1000  0000  0004  1c00
+  1400  ffff  ffff  ffff
+  ffff  ffff  ffff  ffff
+
+UART Control
+------------
+
+  List of available serial ports:
+WARNING:  RXTX Version mismatch
+        Jar version = RXTX-2.2pre1
+        native lib Version = RXTX-2.2pre2
+    COM11

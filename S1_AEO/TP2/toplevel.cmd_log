@@ -1,0 +1,18 @@
+sch2sym -intstyle ise -family spartan6 -refsym toplevel /home/m1/joly/Documents/AEO/TP2/toplevel.sch /home/m1/joly/Documents/AEO/TP2/toplevel.sym 
+xst -intstyle ise -ifn "/home/m1/joly/Documents/AEO/TP2/toplevel.xst" -ofn "/home/m1/joly/Documents/AEO/TP2/toplevel.syr" 
+xst -intstyle ise -ifn "/home/m1/joly/Documents/AEO/TP2/toplevel.xst" -ofn "/home/m1/joly/Documents/AEO/TP2/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel.ngc toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel_map.ncd toplevel.ngd toplevel.pcf 
+par -w -intstyle ise -ol high -mt off toplevel_map.ncd toplevel.ncd toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf -ucf Nexys3.ucf 
+bitgen -intstyle ise -f toplevel.ut toplevel.ncd 

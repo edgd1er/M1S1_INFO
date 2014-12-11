@@ -1,0 +1,16 @@
+NET "switches<0>" LOC = "T10";
+NET "switches<1>" LOC = "T9";
+NET "switches<2>" LOC = "V9";
+NET "switches<3>" LOC = "M8";
+NET "switches<4>" LOC = "N8";
+NET "switches<5>" LOC = "U8";
+NET "switches<6>" LOC = "V8";
+NET "switches<7>" LOC = "T5";
+NET "Led<0>" LOC = "U16";
+NET "Led<1>" LOC = "V16";
+NET "Led<2>" LOC = "U15";
+NET "Led<3>" LOC = "V15";
+NET "Led<4>" LOC = "M11";
+NET "Led<5>" LOC = "N11";
+NET "Led<6>" LOC = "R11";
+NET "Led<7>" LOC = "T11";

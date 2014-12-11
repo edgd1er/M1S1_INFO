@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym afficheur /home/m1/joly/Documents/AEO/TP2/afficheur.sch /home/m1/joly/Documents/AEO/TP2/afficheur.sym 

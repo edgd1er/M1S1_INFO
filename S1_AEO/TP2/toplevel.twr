@@ -1,0 +1,79 @@
+--------------------------------------------------------------------------------
+Release 12.4 Trace  (lin)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+/usr/local/Xilinx/12.4/ISE_DS/ISE/bin/lin/unwrapped/trce -intstyle ise -v 3 -s
+3 -n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf
+-ucf Nexys3.ucf
+
+Design file:              toplevel.ncd
+Physical constraint file: toplevel.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.15 2010-12-02)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+btn0        |    3.834(R)|      SLOW  |   -2.123(R)|      FAST  |clk100            |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+anodes<0>   |         5.158(R)|      SLOW  |         3.063(R)|      FAST  |clk100            |   0.000|
+anodes<1>   |         5.183(R)|      SLOW  |         3.088(R)|      FAST  |clk100            |   0.000|
+anodes<2>   |         4.874(R)|      SLOW  |         2.896(R)|      FAST  |clk100            |   0.000|
+anodes<3>   |         4.899(R)|      SLOW  |         2.924(R)|      FAST  |clk100            |   0.000|
+sevenseg<0> |         7.073(R)|      SLOW  |         3.555(R)|      FAST  |clk100            |   0.000|
+sevenseg<1> |         6.929(R)|      SLOW  |         3.429(R)|      FAST  |clk100            |   0.000|
+sevenseg<2> |         7.212(R)|      SLOW  |         3.638(R)|      FAST  |clk100            |   0.000|
+sevenseg<3> |         7.331(R)|      SLOW  |         3.672(R)|      FAST  |clk100            |   0.000|
+sevenseg<4> |         7.029(R)|      SLOW  |         3.768(R)|      FAST  |clk100            |   0.000|
+sevenseg<5> |         7.497(R)|      SLOW  |         3.775(R)|      FAST  |clk100            |   0.000|
+sevenseg<6> |         7.059(R)|      SLOW  |         3.795(R)|      FAST  |clk100            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.040|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Fri Oct 10 10:32:30 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 130 MB
+
+
+

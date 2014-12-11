@@ -1,0 +1,8 @@
+Release 14.4 Drc P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Mon Oct 06 21:50:48 2014
+
+drc -z toplevel.ncd toplevel.pcf
+
+DRC detected 0 errors and 0 warnings.

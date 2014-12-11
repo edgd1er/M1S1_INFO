@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/m1/xuc/Documents/AEO/TP1/X7seg/Mux4x4_isim_beh1.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="mux4x4" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/mux4x4/i0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">i0[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux4x4/i1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">i1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux4x4/i2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">i2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux4x4/i3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">i3[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux4x4/s" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">s[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s[1:0]</obj_property>
+      <obj_property name="label">s[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux4x4/o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">o[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux4x4/xlxn_84" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_84</obj_property>
+      <obj_property name="ObjectShortName">xlxn_84</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux4x4/xlxi_4_d2_opensignal" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxi_4_d2_opensignal</obj_property>
+      <obj_property name="ObjectShortName">xlxi_4_d2_opensignal</obj_property>
+   </wvobject>
+</wave_config>

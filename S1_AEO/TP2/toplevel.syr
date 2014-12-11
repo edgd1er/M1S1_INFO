@@ -1,0 +1,649 @@
+Release 12.4 - xst M.81d (lin)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: toplevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "toplevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "toplevel"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : toplevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP2/ipcore_dir/timer.vhd" into library work
+Parsing entity <timer>.
+Parsing architecture <xilinx> of entity <timer>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP2/X7seg.vhd" into library work
+Parsing entity <X7seg>.
+Parsing architecture <Behavioral> of entity <x7seg>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP2/shiftanodes.vhf" into library work
+Parsing entity <shiftanodes>.
+Parsing architecture <BEHAVIORAL> of entity <shiftanodes>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP2/Mux4x4.vhf" into library work
+Parsing entity <M4_1E_HXILINX_Mux4x4>.
+Parsing architecture <M4_1E_HXILINX_Mux4x4_V> of entity <m4_1e_hxilinx_mux4x4>.
+Parsing entity <Mux4x4>.
+Parsing architecture <BEHAVIORAL> of entity <mux4x4>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP2/Enable190.vhf" into library work
+Parsing entity <CB4CE_HXILINX_Enable190>.
+Parsing architecture <Behavioral> of entity <cb4ce_hxilinx_enable190>.
+Parsing entity <CB16CE_HXILINX_Enable190>.
+Parsing architecture <Behavioral> of entity <cb16ce_hxilinx_enable190>.
+Parsing entity <Enable190>.
+Parsing architecture <BEHAVIORAL> of entity <enable190>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP2/RDM.vhf" into library work
+Parsing entity <RDM>.
+Parsing architecture <BEHAVIORAL> of entity <rdm>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP2/pulse.vhf" into library work
+Parsing entity <pulse>.
+Parsing architecture <BEHAVIORAL> of entity <pulse>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP2/afficheur.vhf" into library work
+Parsing entity <CB4CE_HXILINX_afficheur>.
+Parsing architecture <Behavioral> of entity <cb4ce_hxilinx_afficheur>.
+Parsing entity <CB16CE_HXILINX_afficheur>.
+Parsing architecture <Behavioral> of entity <cb16ce_hxilinx_afficheur>.
+Parsing entity <M4_1E_HXILINX_afficheur>.
+Parsing architecture <M4_1E_HXILINX_afficheur_V> of entity <m4_1e_hxilinx_afficheur>.
+Parsing entity <CB2CE_HXILINX_afficheur>.
+Parsing architecture <Behavioral> of entity <cb2ce_hxilinx_afficheur>.
+Parsing entity <shiftanodes_MUSER_afficheur>.
+Parsing architecture <BEHAVIORAL> of entity <shiftanodes_muser_afficheur>.
+Parsing entity <Mux4x4_MUSER_afficheur>.
+Parsing architecture <BEHAVIORAL> of entity <mux4x4_muser_afficheur>.
+Parsing entity <Enable190_MUSER_afficheur>.
+Parsing architecture <BEHAVIORAL> of entity <enable190_muser_afficheur>.
+Parsing entity <afficheur>.
+Parsing architecture <BEHAVIORAL> of entity <afficheur>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" into library work
+Parsing entity <CB4CE_HXILINX_toplevel>.
+Parsing architecture <Behavioral> of entity <cb4ce_hxilinx_toplevel>.
+Parsing entity <CB16CE_HXILINX_toplevel>.
+Parsing architecture <Behavioral> of entity <cb16ce_hxilinx_toplevel>.
+Parsing entity <M4_1E_HXILINX_toplevel>.
+Parsing architecture <M4_1E_HXILINX_toplevel_V> of entity <m4_1e_hxilinx_toplevel>.
+Parsing entity <CB2CE_HXILINX_toplevel>.
+Parsing architecture <Behavioral> of entity <cb2ce_hxilinx_toplevel>.
+Parsing entity <shiftanodes_MUSER_toplevel>.
+Parsing architecture <BEHAVIORAL> of entity <shiftanodes_muser_toplevel>.
+Parsing entity <Mux4x4_MUSER_toplevel>.
+Parsing architecture <BEHAVIORAL> of entity <mux4x4_muser_toplevel>.
+Parsing entity <Enable190_MUSER_toplevel>.
+Parsing architecture <BEHAVIORAL> of entity <enable190_muser_toplevel>.
+Parsing entity <afficheur_MUSER_toplevel>.
+Parsing architecture <BEHAVIORAL> of entity <afficheur_muser_toplevel>.
+Parsing entity <RDM_MUSER_toplevel>.
+Parsing architecture <BEHAVIORAL> of entity <rdm_muser_toplevel>.
+Parsing entity <pulse_MUSER_toplevel>.
+Parsing architecture <BEHAVIORAL> of entity <pulse_muser_toplevel>.
+Parsing entity <toplevel>.
+Parsing architecture <BEHAVIORAL> of entity <toplevel>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <toplevel> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <timer> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <Enable190_MUSER_toplevel> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <CB4CE_HXILINX_toplevel> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CB16CE_HXILINX_toplevel> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" Line 369: Net <XLXI_1_CLR_openSignal> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" Line 370: Net <XLXI_2_CLR_openSignal> does not have a driver.
+
+Elaborating entity <pulse_MUSER_toplevel> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <RDM_MUSER_toplevel> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <afficheur_MUSER_toplevel> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <Mux4x4_MUSER_toplevel> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <M4_1E_HXILINX_toplevel> (architecture <M4_1E_HXILINX_toplevel_V>) from library <work>.
+INFO:HDLCompiler:679 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" Line 151. Case statement is complete. others clause is never selected
+
+Elaborating entity <X7seg> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CB2CE_HXILINX_toplevel> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shiftanodes_MUSER_toplevel> (architecture <BEHAVIORAL>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" Line 484: Net <XLXI_8_CLR_openSignal> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" Line 748: Net <din[15]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 783: Output port <CLK_OUT2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <din<15:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <toplevel> synthesized.
+
+Synthesizing Unit <timer>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/ipcore_dir/timer.vhd".
+    Summary:
+	no macro.
+Unit <timer> synthesized.
+
+Synthesizing Unit <Enable190_MUSER_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Set property "HU_SET = XLXI_1_17" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_18" for instance <XLXI_2>.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 421: Output port <CEO> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 421: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 421: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 421: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 421: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 432: Output port <Q> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 432: Output port <TC> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <XLXI_1_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_2_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <Enable190_MUSER_toplevel> synthesized.
+
+Synthesizing Unit <CB4CE_HXILINX_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Found 4-bit register for signal <COUNT>.
+    Found 4-bit adder for signal <COUNT[3]_GND_15_o_add_0_OUT> created at line 57.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CB4CE_HXILINX_toplevel> synthesized.
+
+Synthesizing Unit <CB16CE_HXILINX_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Found 16-bit register for signal <COUNT>.
+    Found 16-bit adder for signal <COUNT[15]_GND_16_o_add_0_OUT> created at line 105.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CB16CE_HXILINX_toplevel> synthesized.
+
+Synthesizing Unit <pulse_MUSER_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Summary:
+	no macro.
+Unit <pulse_MUSER_toplevel> synthesized.
+
+Synthesizing Unit <RDM_MUSER_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Summary:
+	no macro.
+Unit <RDM_MUSER_toplevel> synthesized.
+
+Synthesizing Unit <afficheur_MUSER_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Set property "HU_SET = XLXI_8_19" for instance <XLXI_8>.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 534: Output port <CEO> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf" line 534: Output port <TC> of the instance <XLXI_8> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <XLXI_8_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <afficheur_MUSER_toplevel> synthesized.
+
+Synthesizing Unit <Mux4x4_MUSER_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Set property "HU_SET = XLXI_1_13" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_14" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_15" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_5_16" for instance <XLXI_5>.
+    Summary:
+	no macro.
+Unit <Mux4x4_MUSER_toplevel> synthesized.
+
+Synthesizing Unit <M4_1E_HXILINX_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Found 1-bit 4-to-1 multiplexer for signal <S1_D3_Mux_0_o> created at line 146.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <M4_1E_HXILINX_toplevel> synthesized.
+
+Synthesizing Unit <X7seg>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/X7seg.vhd".
+    Found 16x7-bit Read Only RAM for signal <sevenseg>
+    Summary:
+	inferred   1 RAM(s).
+Unit <X7seg> synthesized.
+
+Synthesizing Unit <CB2CE_HXILINX_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Found 2-bit register for signal <COUNT>.
+    Found 2-bit adder for signal <COUNT[1]_GND_23_o_add_0_OUT> created at line 190.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CB2CE_HXILINX_toplevel> synthesized.
+
+Synthesizing Unit <shiftanodes_MUSER_toplevel>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel.vhf".
+    Summary:
+	no macro.
+Unit <shiftanodes_MUSER_toplevel> synthesized.
+RTL-Simplification CPUSTAT: 0.01 
+RTL-BasicInf CPUSTAT: 0.16 
+RTL-BasicOpt CPUSTAT: 0.00 
+RTL-Remain-Bus CPUSTAT: 0.00 
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x7-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 2
+# Registers                                            : 5
+ 16-bit register                                       : 2
+ 2-bit register                                        : 1
+ 4-bit register                                        : 2
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 9
+ 1-bit 4-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CB16CE_HXILINX_toplevel>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <CB16CE_HXILINX_toplevel> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CB2CE_HXILINX_toplevel>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <CB2CE_HXILINX_toplevel> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CB4CE_HXILINX_toplevel>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <CB4CE_HXILINX_toplevel> synthesized (advanced).
+
+Synthesizing (advanced) Unit <X7seg>.
+INFO:Xst:3031 - HDL ADVISOR - The RAM <Mram_sevenseg> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Sw>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <sevenseg>      |          |
+    -----------------------------------------------------------------------
+Unit <X7seg> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x7-bit single-port distributed Read Only RAM        : 1
+# Counters                                             : 5
+ 16-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <toplevel> ...
+
+Optimizing unit <pulse_MUSER_toplevel> ...
+
+Optimizing unit <CB4CE_HXILINX_toplevel> ...
+
+Optimizing unit <CB16CE_HXILINX_toplevel> ...
+
+Optimizing unit <CB2CE_HXILINX_toplevel> ...
+
+Optimizing unit <M4_1E_HXILINX_toplevel> ...
+WARNING:Xst:2677 - Node <COUNT_3> of sequential type is unconnected in block <XLXI_5/XLXI_9/XLXI_1>.
+WARNING:Xst:2677 - Node <COUNT_3> of sequential type is unconnected in block <XLXI_2/XLXI_1>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block toplevel, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 58
+ Flip-Flops                                            : 58
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : toplevel.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 131
+#      AND3                        : 2
+#      GND                         : 3
+#      INV                         : 8
+#      LUT1                        : 30
+#      LUT2                        : 3
+#      LUT3                        : 6
+#      LUT4                        : 7
+#      LUT6                        : 6
+#      MUXCY                       : 30
+#      VCC                         : 3
+#      XOR2                        : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 58
+#      FD                          : 7
+#      FDCE                        : 40
+#      FDE                         : 11
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 13
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 11
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# Logical                          : 2
+#      NOR2                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              58  out of  18224     0%  
+ Number of Slice LUTs:                   60  out of   9112     0%  
+    Number used as Logic:                60  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    118
+   Number with an unused Flip Flop:      60  out of    118    50%  
+   Number with an unused LUT:            58  out of    118    49%  
+   Number of fully used LUT-FF pairs:     0  out of    118     0%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | XLXI_1/dcm_sp_inst:CLK0| 58    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.490ns (Maximum Frequency: 286.504MHz)
+   Minimum input arrival time before clock: 1.903ns
+   Maximum output required time after clock: 5.998ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.490ns (frequency: 286.504MHz)
+  Total number of paths / destination ports: 433 / 76
+-------------------------------------------------------------------------
+Delay:               3.490ns (Levels of Logic = 3)
+  Source:            XLXI_5/XLXI_9/XLXI_2/COUNT_5 (FF)
+  Destination:       XLXI_5/XLXI_9/XLXI_1/COUNT_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: XLXI_5/XLXI_9/XLXI_2/COUNT_5 to XLXI_5/XLXI_9/XLXI_1/COUNT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.981  COUNT_5 (COUNT_5)
+     LUT6:I0->O            1   0.203   0.684  COUNT[15]_PWR_11_o_equal_5_o<15>2 (COUNT[15]_PWR_11_o_equal_5_o<15>1)
+     LUT6:I4->O            3   0.203   0.650  COUNT[15]_PWR_11_o_equal_5_o<15>3 (CEO)
+     end scope: 'XLXI_5/XLXI_9/XLXI_2'
+     begin scope: 'XLXI_5/XLXI_9/XLXI_1'
+     FDCE:CE                   0.322          COUNT_0
+    ----------------------------------------
+    Total                      3.490ns (1.175ns logic, 2.315ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            btn0 (PAD)
+  Destination:       XLXI_3/XLXI_5 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn0 to XLXI_3/XLXI_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btn0_IBUF (btn0_IBUF)
+     FDE:D                     0.102          XLXI_3/XLXI_5
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 88 / 11
+-------------------------------------------------------------------------
+Offset:              5.998ns (Levels of Logic = 5)
+  Source:            XLXI_5/XLXI_8/COUNT_0 (FF)
+  Destination:       sevenseg<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_5/XLXI_8/COUNT_0 to sevenseg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.447   0.973  COUNT_0 (COUNT_0)
+     end scope: 'XLXI_5/XLXI_8'
+     begin scope: 'XLXI_5/XLXI_6/XLXI_2'
+     LUT3:I0->O            7   0.205   1.021  Mmux_O11 (O)
+     end scope: 'XLXI_5/XLXI_6/XLXI_2'
+     LUT4:I0->O            1   0.203   0.579  XLXI_5/XLXI_7/Mram_sevenseg111 (sevenseg_1_OBUF)
+     OBUF:I->O                 2.571          sevenseg_1_OBUF (sevenseg<1>)
+    ----------------------------------------
+    Total                      5.998ns (3.426ns logic, 2.572ns route)
+                                       (57.1% logic, 42.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.490|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.65 secs
+ 
+--> 
+
+
+Total memory usage is 147332 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

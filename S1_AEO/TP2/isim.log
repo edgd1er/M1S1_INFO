@@ -1,0 +1,23 @@
+ISim log file
+Running: F:\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP2\shiftled_isim_beh.exe -gui -tclbatch isim.cmd -wdb F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/shiftled_isim_beh.wdb 
+ISim M.81d (signature 0x12940baa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /shiftled/clk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
+# isim force add /shiftled/e 1 -radix bin
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us

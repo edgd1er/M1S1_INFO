@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP_Bonus\L3TP5\toplevel.ncd
+OUTFILE=F:\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP_Bonus\L3TP5\toplevel.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=F:\Documents_utilisateurs\Francois\_Hubic\Documents\Formation\S1_AEO\AEO_TP\TP_Bonus\L3TP5
+LICENSE=WebPack
+USER_INFO=210938337_0_0_959

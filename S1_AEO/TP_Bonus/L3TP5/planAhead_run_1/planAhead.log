@@ -1,0 +1,237 @@
+#-----------------------------------------------------------
+# PlanAhead v12.4
+# Build 108585 by hdbuild on Tue Nov  9 16:43:51 PST 2010
+# Start of session at: Mon Oct  6 18:11:56 2014
+# Process ID: 5771
+# Log file: /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/planAhead_run_1/planAhead.log
+# Journal file: /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-Licensing 3] Your PlanAhead license expires in -858 day(s)
+INFO: [HD-ArchReader 0] Loading parts and site information from /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file '/usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file '/usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+start_gui -source /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/pa.fromHdl.tcl
+# create_project -name L3TP5 -dir "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/planAhead_run_1" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property top toplevel $srcset
+# set_param project.paUcfFile  "Nexys3_Master.ucf"
+# set hdlfile [add_files [list {fsm.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {controleur.vhf}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {clkdiv.vhf}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {toplevel.vhf}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# add_files "Nexys3_Master.ucf" -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+INFO: [HD-RTLIN 2] Parsing VHDL file "/usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+INFO: [HD-RTLIN 2] Parsing package <attributes>.
+INFO: [HD-RTLIN 2] Parsing VHDL file "/usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+INFO: [HD-RTLIN 2] Parsing package <attributes>.
+INFO: [HD-RTLIN 2] Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.vhd" into library work
+INFO: [HD-RTLIN 2] Parsing entity <fsm>.
+INFO: [HD-RTLIN 2] Parsing architecture <Behavioral> of entity <fsm>.
+INFO: [HD-RTLIN 2] Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/controleur.vhf" into library work
+INFO: [HD-RTLIN 2] Parsing entity <CB4CE_HXILINX_controleur>.
+INFO: [HD-RTLIN 2] Parsing architecture <Behavioral> of entity <cb4ce_hxilinx_controleur>.
+INFO: [HD-RTLIN 2] Parsing entity <controleur>.
+INFO: [HD-RTLIN 2] Parsing architecture <BEHAVIORAL> of entity <controleur>.
+INFO: [HD-RTLIN 2] Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/clkdiv.vhf" into library work
+INFO: [HD-RTLIN 2] Parsing entity <clkdiv>.
+INFO: [HD-RTLIN 2] Parsing architecture <BEHAVIORAL> of entity <clkdiv>.
+INFO: [HD-RTLIN 2] Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.vhf" into library work
+INFO: [HD-RTLIN 2] Parsing entity <CB4CE_HXILINX_toplevel>.
+INFO: [HD-RTLIN 2] Parsing architecture <Behavioral> of entity <cb4ce_hxilinx_toplevel>.
+INFO: [HD-RTLIN 2] Parsing entity <controleur_MUSER_toplevel>.
+INFO: [HD-RTLIN 2] Parsing architecture <BEHAVIORAL> of entity <controleur_muser_toplevel>.
+INFO: [HD-RTLIN 2] Parsing entity <clkdiv_MUSER_toplevel>.
+INFO: [HD-RTLIN 2] Parsing architecture <BEHAVIORAL> of entity <clkdiv_muser_toplevel>.
+INFO: [HD-RTLIN 2] Parsing entity <toplevel>.
+INFO: [HD-RTLIN 2] Parsing architecture <BEHAVIORAL> of entity <toplevel>.
+WARN: [HD-RTLIN 1] /build/xfndry/M.48/rtf/vhdl/xst/src/numeric_std.vhd(878) Range is empty (null range)
+WARN: [HD-RTLIN 1] /build/xfndry/M.48/rtf/vhdl/xst/src/numeric_std.vhd(879) Range is empty (null range)
+INFO: [HD-RTLIN 2] Elaborating entity <toplevel> (architecture <BEHAVIORAL>) from library <work>.
+INFO: [HD-RTLIN 2] Elaborating entity <clkdiv_MUSER_toplevel> (architecture <BEHAVIORAL>) from library <work>.
+INFO: [HD-RTLIN 2] Elaborating entity <controleur_MUSER_toplevel> (architecture <BEHAVIORAL>) from library <work>.
+INFO: [HD-RTLIN 2] Elaborating entity <CB4CE_HXILINX_toplevel> (architecture <Behavioral>) from library <work>.
+INFO: [HD-RTLIN 2] Elaborating entity <fsm> (architecture <Behavioral>) from library <work>.
+INFO: [HD-RTLIN 1] /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.vhd(66) Case statement is complete. Others clause is never selected and therefore discarded.
+WARN: [HD-RTLIN 1] /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.vhd(89) travaux should be on the sensitivity list of the process
+WARN: [HD-RTLIN 1] /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.vhd(97) cpt should be on the sensitivity list of the process
+WARN: [HD-RTLIN 1] /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.vhd(105) travaux should be on the sensitivity list of the process
+INFO: [HD-RTLIN 1] /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.vhd(112) Case statement is complete. Others clause is never selected and therefore discarded.
+WARN: [HD-RTLIN 1] /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/toplevel.vhf(89) Net <VCC> does not have a driver.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'FD1'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'FD2'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'FD3'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'FD4'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'FD5'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'FD6'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'FD7'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_2'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_4'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_6'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_8'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_10'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_12'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_14'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_16'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_17'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_18'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_19'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_20'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_21'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_22'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_23'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_24'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_25'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_26'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_27'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_28'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_29'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_30'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_31'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_32'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_33'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_34'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_35'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_36'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_37'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_38'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_39'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_40'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_41'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_42'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_43'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_44'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_45'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_46'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_47'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_48'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_49'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_50'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_51'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'INV' defined in file 'toplevel.vhf' instantiated as 'XLXI_52'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_55'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_56'.
+WARN: [HD-EDIFIN 0] Could not resolve non-primitive black box cell 'FD' defined in file 'toplevel.vhf' instantiated as 'XLXI_57'.
+INFO: [HD-ArchReader 7] Loading clock regions from /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+INFO: [HD-ArchReader 8] Loading clock buffers from /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+INFO: [HD-ArchReader 3] Loading package from /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+INFO: [HD-ArchReader 13] Loading package pin functions from /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/xilinx/spartan6/PinFunctions.xml...
+INFO: [HD-ArchReader 4] Loading io standards from /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/./parts/xilinx/spartan6/IOStandards.xml
+INFO: [HD-ArchReader 12] Loading device configuration modes from /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/parts/xilinx/spartan6/ConfigModes.xml
+INFO: [HD-GDRC 0] Loading list of drcs for the architecture : /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/./parts/xilinx/spartan6/drc.xml
+INFO: [HD-UCFReader 0] Parsing UCF File : ./Nexys3_Master.ucf
+INFO: [HD-UCFReader 1] Finished Parsing UCF File : ./Nexys3_Master.ucf
+
+DESIGN RULE CHECK VIOLATION REPORT
+   Build: PlanAhead v12.4 by hdbuild
+          on  Tue Nov  9 16:43:51 PST 2010
+  Report: by dubiez on host a10p26, pid 5771
+          on Mon Oct  6 18:12:09 2014
+
+REPORT SUMMARY
+            Netlist: toplevel
+          Floorplan: <none>
+      Design limits: <entire design considered>
+             Checks: Unknown block name
+                     Unknown Unisim pin name
+                     Mismatching Attribute
+           Max vios: <unlimited>
+         Vios found: 16
+
+REPORT DETAILS
+ULMN#1
+Unknown block name - <no location>
+Block name RTL_GND is not a valid Unisim for the specified architecture. No block of type RTL_GND exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#2
+Unknown block name - <no location>
+Block name RTL_PWR is not a valid Unisim for the specified architecture. No block of type RTL_PWR exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#3
+Unknown block name - <no location>
+Block name RTL_wide_fdcpe_4 is not a valid Unisim for the specified architecture. No block of type RTL_wide_fdcpe_4 exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#4
+Unknown block name - <no location>
+Block name RTL_add_4u_4u is not a valid Unisim for the specified architecture. No block of type RTL_add_4u_4u exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#5
+Unknown block name - <no location>
+Block name RTL_MUX is not a valid Unisim for the specified architecture. No block of type RTL_MUX exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#6
+Unknown block name - <no location>
+Block name RTL_equal_4 is not a valid Unisim for the specified architecture. No block of type RTL_equal_4 exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#7
+Unknown block name - <no location>
+Block name RTL_AND is not a valid Unisim for the specified architecture. No block of type RTL_AND exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#8
+Unknown block name - <no location>
+Block name RTL_X is not a valid Unisim for the specified architecture. No block of type RTL_X exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#9
+Unknown block name - <no location>
+Block name RTL_wide_fdrse_8 is not a valid Unisim for the specified architecture. No block of type RTL_wide_fdrse_8 exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#10
+Unknown block name - <no location>
+Block name RTL_Mux_2u_4u is not a valid Unisim for the specified architecture. No block of type RTL_Mux_2u_4u exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#11
+Unknown block name - <no location>
+Block name RTL_Mux_3u_8u is not a valid Unisim for the specified architecture. No block of type RTL_Mux_3u_8u exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#12
+Unknown block name - <no location>
+Block name RTL_mux_3 is not a valid Unisim for the specified architecture. No block of type RTL_mux_3 exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#13
+Unknown block name - <no location>
+Block name RTL_INV is not a valid Unisim for the specified architecture. No block of type RTL_INV exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#14
+Unknown block name - <no location>
+Block name RTL_wide_mux_3_24 is not a valid Unisim for the specified architecture. No block of type RTL_wide_mux_3_24 exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#15
+Unknown block name - <no location>
+Block name RTL_FDRSE is not a valid Unisim for the specified architecture. No block of type RTL_FDRSE exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+ULMN#16
+Unknown block name - <no location>
+Block name RTL_wide_fdrse_3 is not a valid Unisim for the specified architecture. No block of type RTL_wide_fdrse_3 exists in the Unisim library for the spartan6lx architecture.
+Related Vios: <none>
+
+INFO: [HD-LIB 0] Reading timing library /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/./parts/xilinx/spartan6/spartan6.lib .
+INFO: [HD-LIB 1] Done reading timing library /usr/local/Xilinx/12.4/ISE_DS/PlanAhead/./parts/xilinx/spartan6/spartan6.lib .
+exit
+INFO: [HD-Application 0] Exiting PlanAhead...
+INFO: [HD-Licensing 2] Releasing license: PlanAhead

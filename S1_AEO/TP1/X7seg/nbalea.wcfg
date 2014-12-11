@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/m1/xuc/Documents/AEO/TP1/X7seg/RDM_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="rdm" />
+            <top_module name="std_logic_1164" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="/rdm/ce" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ce</obj_property>
+      <obj_property name="ObjectShortName">ce</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rdm/clk" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="label">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rdm/q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">q[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rdm/xlxn_2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_2</obj_property>
+      <obj_property name="ObjectShortName">xlxn_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rdm/q_dummy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">q_dummy[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q_dummy[3:0]</obj_property>
+   </wvobject>
+</wave_config>

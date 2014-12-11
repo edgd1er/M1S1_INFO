@@ -1,0 +1,18 @@
+vhdtdtfi -lib work fsm.vhd -prj L3TP5 -o fsm.spl -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 fsm.spl /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.sym 
+vhdtdtfi -lib work fsm.vhd -prj L3TP5 -o fsm.spl -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 fsm.spl /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.sym 
+vhdtdtfi -lib work fsm.vhd -prj L3TP5 -o fsm.spl -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 fsm.spl /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.sym 
+vhdtdtfi -lib work fsm.vhd -prj L3TP5 -o fsm.spl -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 fsm.spl /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.sym 
+vhdtdtfi -lib work fsm.vhd -prj L3TP5 -o fsm.spl -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w fsm.spl /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.sym 
+vhdtdtfi -lib work fsm.vhd -prj L3TP5 -o fsm.spl -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w fsm.spl /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.sym 
+vhdtdtfi -lib work fsm.vhd -prj L3TP5 -o fsm.spl -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w fsm.spl /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.sym 
+vhdtdtfi -lib work fsm.vhd -prj L3TP5 -o fsm.spl -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w fsm.spl /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.sym 
+vhdtdtfi -lib work fsm.vhd -prj L3TP5 -o fsm.spl -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w fsm.spl /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/fsm.sym 

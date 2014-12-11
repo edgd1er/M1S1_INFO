@@ -1,0 +1,73 @@
+sch2sym -intstyle ise -family spartan6 -refsym toplevel2 /home/m1/dubiez/Documents/AEO_TP/TP2/toplevel2.sch /home/m1/dubiez/Documents/AEO_TP/TP2/toplevel2.sym 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel2.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+par -w -intstyle ise -ol high -mt off toplevel2_map.ncd toplevel2.ncd toplevel2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel2.twx toplevel2.ncd -o toplevel2.twr toplevel2.pcf -ucf Nexys3.ucf 
+bitgen -intstyle ise -f toplevel2.ut toplevel2.ncd 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel2.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+par -w -intstyle ise -ol high -mt off toplevel2_map.ncd toplevel2.ncd toplevel2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel2.twx toplevel2.ncd -o toplevel2.twr toplevel2.pcf -ucf Nexys3.ucf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+par -w -intstyle ise -ol high -mt off toplevel2_map.ncd toplevel2.ncd toplevel2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel2.twx toplevel2.ncd -o toplevel2.twr toplevel2.pcf -ucf Nexys3.ucf 
+bitgen -intstyle ise -f toplevel2.ut toplevel2.ncd 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+sch2sym -intstyle ise -family spartan6 -refsym toplevel2 F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.sch F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.sym 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 toplevel2.ngc toplevel2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o toplevel2_map.ncd toplevel2.ngd toplevel2.pcf 
+par -w -intstyle ise -ol high -mt off toplevel2_map.ncd toplevel2.ncd toplevel2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml toplevel2.twx toplevel2.ncd -o toplevel2.twr toplevel2.pcf -ucf Nexys3.ucf 
+bitgen -intstyle ise -f toplevel2.ut toplevel2.ncd 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 
+xst -intstyle ise -ifn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.xst" -ofn "F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/AEO_TP/TP2/toplevel2.syr" 

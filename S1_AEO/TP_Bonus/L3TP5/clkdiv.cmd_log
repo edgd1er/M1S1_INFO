@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan6 -refsym clkdiv /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/clkdiv.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/clkdiv.sym 
+sch2sym -intstyle ise -family spartan6 -refsym clkdiv /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/clkdiv.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/clkdiv.sym 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl clkdiv_drc.vhf -w /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/clkdiv.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym clkdiv /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/clkdiv.sch /home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/clkdiv.sym 

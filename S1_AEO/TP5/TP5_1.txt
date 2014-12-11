@@ -1,0 +1,43 @@
+Chargement de homade:
+djtgcfg -d Nexys3 prog -i 0 -f Nexys3v5.bit 
+
+chargement du pgm via le port UART.
+java -jar /opt/jHomade/jhomade-2.1.jar  -p /dev/ttyUSB0 TP5corr.hmd
+
+
+--  Master code 
+x"0C00_0000_000C_FFFF",  -- 0000
+x"201F_A402_8804_8003",  -- 0004
+x"A002_03FB_1400_FFFF",  -- 0008
+x"1000_0000_0004_1C00",  -- 000C
+x"FFFF_FFFF_FFFF_FFFF"  --  0010
+-- Slave code
+,
+x"1000_0000_0004_1C00", --  0000
+x"1400_FFFF_FFFF_FFFF", --  0004
+x"FFFF_FFFF_FFFF_FFFF"  --  0008
+);
+
+x"0C00_0000_000C => va en ligne 0c
+201F
+charge 1F
+A402
+Attend le button avec le masque ci dessus
+
+8804
+empile la valeur du switch
+
+8003
+led up  	LedDup ( a - a ) LED <= a(7:0) 
+
+x"A002
+buf out:  a(15:0) s'affiche sur les 4 afficheurs 7 segements
+
+03FB
+JNZ @ 0004
+
+_1400_FFFF",  -- 0008
+
+x"1000_0000_0004_1C00",  -- 000C
+x"FFFF_FFFF_FFFF_FFFF"  --  0010
+

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/impact.xsl
+OUTFILE=/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/m1/dubiez/Documents/AEO_TP/TP_Bonus/L3TP5
+LICENSE=iMPACT
+USER_INFO=iMPACT
