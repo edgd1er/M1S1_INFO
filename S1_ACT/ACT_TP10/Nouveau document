@@ -1,0 +1,57 @@
+/*********L’objet problème****************/
+public class Pbl {
+public Pbl(){} }
+//le pb d’optimisation du BinPacking
+public class PblBinPack extends Pbl{
+public int nbobjets; //nb d’objets
+public int poids[]; //poids des objets
+public int cap;
+//capacité d’un sac
+...
+}
+}
+/*********L’objet solution partielle****************/
+/* Interface des solutions partielles */
+interface PartialSolution {
+public boolean Complete(); //solution est complete!
+public void Display();
+//affichage}
+/* classe des solutions partielles pour BinPacking */
+...class PartialSolutionBinPack implements PartialSolution{...
+/* attention: pour représenter une solution partielle privilégiez la simplicité!
+doit contenir des méthodes pour prolonger une solution: affecter un sac à un objet, ...)*/ }
+/*********L’objet "constructeur de solutions partielles"
+construit une solution de facon incrémentale
+peut etre vu comme un "walker" dans un arbre de solutions partielles
+à la création il est à la racine;
+à chaque pas, passe à un noeud voisin selon un critère dépendant de l’heuristique choisie
+la balade est terminée quand la solution est complète ***************/
+/* interface du parcoureur de solutions */
+interface SolutionWalker {
+public boolean Terminated(); //la solution courante est complete
+public void NextPartialSolution(); //passe a UNE solution suivante
+public PartialSolution Current(); //la solution courante}
+/* classe abstraite du parcoureur de solution pour BinPacking */
+....abstract class SolutionWalkerBinPack implements SolutionWalker {
+...
+}
+/* classe du parcoureur de solution pour bin_packing selon un critère glouton XX
+et avec choix de l’énumération */
+...class SolutionWalkerBinPackXX extends SolutionWalkerBinPack{
+public SolutionWalkerBinPackXX(Pbl_Bin_Pack pbl, EnumerationObjets en){
+//on peut passer en en parametre: deux énumérations ici:
+// online et par poids décroissants
+//on peut aussi simplement construire le probleme avec objets tries au depart.... }
+public void NextPartialSolution(){ //implémenter selon le critère glouton!} }
+/*******************/
+/* interface d’une enumeration d’objets -on peut utiliser aussi l’interface Java Iterator */
+interface EnumerationObjets{
+boolean hasMoreElements ();
+int NextElement (); }
+/* classe d’enumeration online */
+..class EnumerationOnline implements Enumeration_objets{
+//... }
+/* classe d’enumeration triee selon les poids décroissants */
+...class EnumerationTriee implements EnumerationObjets{
+// on utilisera par exemple une implémentation de la classe Comparator de java.util }
+
