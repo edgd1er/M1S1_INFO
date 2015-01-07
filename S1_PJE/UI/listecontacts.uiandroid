@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiandroid:UIAndroid xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uiandroid="http:///uiandroid.ecore" main="//@affichages.0" paquetage="pje.listelivres">
+  <affichages id="lv">
+    <root xsi:type="uiandroid:LinearLayout" orientation="vertical">
+      <layoutParams width="fill_parent" height="fill_parent"/>
+      <contenu xsi:type="uiandroid:Texte" id="titre" texte="//@valeursGlobales.0">
+        <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="wrap_content" height="wrap_content" paddingBottom="10dp"/>
+      </contenu>
+      <contenu xsi:type="uiandroid:ListView" id="listeV" afficheurContenu="//@afficheurs.0">
+        <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="fill_parent" height="fill_parent"/>
+        <listLoader id="myBookLoader">
+          <corps>// recherche la vue affichant la liste
+BookCollection books = new BookCollection();
+
+// list des objets
+java.util.List&lt;java.util.Map&lt;String, String>> ListOfBook = new java.util.ArrayList&lt;java.util.Map&lt;String, String>>();
+for (Book book : books.getBooks()) {
+	java.util.Map&lt;String, String> bookMap = new java.util.HashMap&lt;String, String>();
+
+	// ->script
+	bookMap.put(&quot;img&quot;, String.valueOf(R.drawable.ic_launcher));
+	// use available img
+	// ->script
+	bookMap.put(&quot;author&quot;, book.getAuthor());
+	bookMap.put(&quot;title&quot;, book.getTitle());
+	bookMap.put(&quot;isbn&quot;, book.getIsbn());
+	ListOfBook.add(bookMap);
+}
+
+// Cree un adapter faisant le lien entre la liste d'élément et la
+// ListView servant à l'affichage.
+SimpleAdapter listAdapter = new SimpleAdapter(this.getBaseContext(),
+		ListOfBook, 
+		layoutId, 
+		new String[] { &quot;author&quot;, &quot;title&quot;, &quot;isbn&quot; }, 
+		new int[] {	R.id.bookAuthor, R.id.bookTitle,R.id.bookIsbn });
+// Associe l’adapter et le ListView
+listView.setAdapter(listAdapter);
+</corps>
+        </listLoader>
+      </contenu>
+    </root>
+  </affichages>
+  <valeursGlobales xsi:type="uiandroid:ValeurConstanteChaine" nom="message" valeur="Application Liste de Livres"/>
+  <afficheurs xsi:type="uiandroid:LinearLayout" id="book_detail" orientation="vertical">
+    <layoutParams width="match_parent" height="match_parent"/>
+    <contenu xsi:type="uiandroid:Texte" id="bookAuthor">
+      <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="match_parent" height="wrap_content"/>
+    </contenu>
+    <contenu xsi:type="uiandroid:Texte" id="bookTitle">
+      <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="match_parent" height="wrap_content"/>
+    </contenu>
+    <contenu xsi:type="uiandroid:Texte" id="bookIsbn">
+      <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="match_parent" height="wrap_content"/>
+    </contenu>
+  </afficheurs>
+</uiandroid:UIAndroid>

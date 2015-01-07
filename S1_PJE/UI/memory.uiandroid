@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiandroid:UIAndroid xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uiandroid="http:///uiandroid.ecore" main="//@affichages.0" paquetage="pje.memory">
+  <affichages id="memory">
+    <root xsi:type="uiandroid:LinearLayout" orientation="vertical" gravity="center">
+      <layoutParams width="fill_parent" height="fill_parent"/>
+      <contenu xsi:type="uiandroid:Texte" id="titre" texte="//@valeursGlobales.0">
+        <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="wrap_content" height="wrap_content" gravity="center"/>
+      </contenu>
+      <contenu xsi:type="uiandroid:RelativeLayout" id="cartes">
+        <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="wrap_content" height="wrap_content" gravity="center"/>
+        <contenu xsi:type="uiandroid:Image" id="img1" name="carte_envers">
+          <layoutParams xsi:type="uiandroid:RelativeLayoutParams" width="50dp" height="wrap_content" marginRight="10dp" paddingBottom="10dp" centerHorizontal="false" centerVertical="false" centerInParent="false"/>
+          <actions xsi:type="uiandroid:ExécuterScript" id="executerTraitement" script="//@affichages.0/@scriptsLocaux.0"/>
+        </contenu>
+        <contenu xsi:type="uiandroid:Image" id="img2" name="carte_envers">
+          <layoutParams xsi:type="uiandroid:RelativeLayoutParams" width="50dp" height="wrap_content" marginRight="10dp" toLeftOf="" toRightOf="img1" paddingBottom="10dp" centerHorizontal="false" centerVertical="false" centerInParent="false"/>
+          <actions xsi:type="uiandroid:ExécuterScript" id="executerTraitement" script="//@affichages.0/@scriptsLocaux.0"/>
+        </contenu>
+        <contenu xsi:type="uiandroid:Image" id="img3" name="carte_envers">
+          <layoutParams xsi:type="uiandroid:RelativeLayoutParams" width="50dp" height="wrap_content" marginRight="10dp" toLeftOf="" toRightOf="img2" alignBottom="" alignRight="" paddingBottom="10dp" centerHorizontal="false" centerVertical="false" centerInParent="false"/>
+          <actions xsi:type="uiandroid:ExécuterScript" id="executerTraitement" script="//@affichages.0/@scriptsLocaux.0"/>
+        </contenu>
+        <contenu xsi:type="uiandroid:Image" id="img4" name="carte_envers">
+          <layoutParams xsi:type="uiandroid:RelativeLayoutParams" width="50dp" height="wrap_content" toLeftOf="" toRightOf="img3" paddingBottom="10dp" centerHorizontal="false" centerVertical="false" centerInParent="false"/>
+          <actions xsi:type="uiandroid:ExécuterScript" id="executerTraitement" script="//@affichages.0/@scriptsLocaux.0"/>
+        </contenu>
+        <contenu xsi:type="uiandroid:Image" id="img5" name="carte_envers">
+          <layoutParams xsi:type="uiandroid:RelativeLayoutParams" width="50dp" height="wrap_content" marginRight="10dp" below="img1" centerHorizontal="false" centerVertical="false" centerInParent="false"/>
+          <actions xsi:type="uiandroid:ExécuterScript" id="executerTraitement" script="//@affichages.0/@scriptsLocaux.0"/>
+        </contenu>
+        <contenu xsi:type="uiandroid:Image" id="img6" name="carte_envers">
+          <layoutParams xsi:type="uiandroid:RelativeLayoutParams" width="50dp" height="wrap_content" marginRight="10dp" toLeftOf="" toRightOf="img5" alignTop="img5" centerHorizontal="false" centerVertical="false" centerInParent="false"/>
+          <actions xsi:type="uiandroid:ExécuterScript" id="executerTraitement" script="//@affichages.0/@scriptsLocaux.0"/>
+        </contenu>
+        <contenu xsi:type="uiandroid:Image" id="img7" name="carte_envers">
+          <layoutParams xsi:type="uiandroid:RelativeLayoutParams" width="50dp" height="wrap_content" marginRight="10dp" toLeftOf="" toRightOf="img6" alignTop="img5" alignRight="" paddingTop="" centerHorizontal="false" centerVertical="false" centerInParent="false"/>
+          <actions xsi:type="uiandroid:ExécuterScript" id="executerTraitement" script="//@affichages.0/@scriptsLocaux.0"/>
+        </contenu>
+        <contenu xsi:type="uiandroid:Image" id="img8" name="carte_envers">
+          <layoutParams xsi:type="uiandroid:RelativeLayoutParams" width="50dp" height="wrap_content" marginRight="10dp" toLeftOf="" toRightOf="img7" alignTop="img5" centerHorizontal="false" centerVertical="false" centerInParent="false"/>
+          <actions xsi:type="uiandroid:ExécuterScript" id="executerTraitement" script="//@affichages.0/@scriptsLocaux.0"/>
+        </contenu>
+      </contenu>
+      <contenu xsi:type="uiandroid:Bouton" id="recommencer" label="//@valeursGlobales.1">
+        <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="wrap_content" height="wrap_content" gravity="right"/>
+        <actions xsi:type="uiandroid:AfficherEcran" id="" écran="//@affichages.0"/>
+      </contenu>
+    </root>
+    <valeursLocales xsi:type="uiandroid:ValeurCalculéeEntière" nom="numClic"/>
+    <valeursLocales xsi:type="uiandroid:ValeurCalculéeEntière" nom="premier"/>
+    <valeursLocales xsi:type="uiandroid:ValeurCalculéeEntière" nom="deuxième"/>
+    <scriptsLocaux xsi:type="uiandroid:Ecouteur" id="traitement" type="void">
+      <corps>  // récupère le n° de la carte
+  int numéro = self.getId();
+  // ne rien faire si la carte est retournée
+  if (isVisible.get(numéro)) return;
+  // montre la carte sélectionnée
+  ((ImageView)self).setImageResource(mappingCartes.get(numéro));
+  isVisible.put(numéro, true);
+  // réagit en fonction du numéro de clic
+  if (numClic==1) premier = numéro;
+  if (numClic==2) deuxième = numéro;
+  if (numClic==3) {
+      if (!mappingCartes.get(premier).equals(mappingCartes.get(deuxième))) { // réaffiche le dos des cartes
+	  ((ImageView)selfContext.findViewById(premier)).setImageResource(R.drawable.carte_envers);
+	  ((ImageView)selfContext.findViewById(deuxième)).setImageResource(R.drawable.carte_envers);
+	  isVisible.put(premier, false);
+	  isVisible.put(deuxième, false);
+      } 
+      premier = numéro;
+      numClic = 1;
+  }
+  numClic++;
+</corps>
+    </scriptsLocaux>
+    <scriptsLocaux id="initMapping" type="void">
+      <corps>  numClic = 1;
+  isVisible.put(R.id.img1, false);
+  isVisible.put(R.id.img2, false);
+  isVisible.put(R.id.img3, false);
+  isVisible.put(R.id.img4, false);
+  isVisible.put(R.id.img5, false);
+  isVisible.put(R.id.img6, false);
+  isVisible.put(R.id.img7, false);
+  isVisible.put(R.id.img8, false);
+  int mélange[] = { R.drawable.as_carreau, R.drawable.as_carreau, R.drawable.as_coeur, R.drawable.as_coeur, 
+		    R.drawable.as_pique, R.drawable.as_pique, R.drawable.as_trefle, R.drawable.as_trefle };
+  for (int i=0; i&lt;8; i++) {
+      int hasard = (int)Math.floor(Math.random()*8);
+      int save = mélange[0];
+      mélange[0] = mélange[hasard];
+      mélange[hasard] = save;
+  }
+  mappingCartes.put(R.id.img1, mélange[0]);
+  mappingCartes.put(R.id.img2, mélange[1]);
+  mappingCartes.put(R.id.img3, mélange[2]);
+  mappingCartes.put(R.id.img4, mélange[3]);
+  mappingCartes.put(R.id.img5, mélange[4]);
+  mappingCartes.put(R.id.img6, mélange[5]);
+  mappingCartes.put(R.id.img7, mélange[6]);
+  mappingCartes.put(R.id.img8, mélange[7]);
+</corps>
+    </scriptsLocaux>
+    <déclarationsSpéciales>
+      <lignes>java.util.Map&lt;Integer, Integer> mappingCartes = new java.util.HashMap&lt;Integer, Integer>();
+</lignes>
+      <lignes>java.util.Map&lt;Integer, Boolean> isVisible = new java.util.HashMap&lt;Integer, Boolean>();
+</lignes>
+    </déclarationsSpéciales>
+    <actionsDémarrage xsi:type="uiandroid:ExécuterScript" id="lancementInit" script="//@affichages.0/@scriptsLocaux.1"/>
+  </affichages>
+  <valeursGlobales xsi:type="uiandroid:ValeurConstanteChaine" nom="texteTitre" valeur="Jeu du MEMORY"/>
+  <valeursGlobales xsi:type="uiandroid:ValeurConstanteChaine" nom="labelBouton" valeur="Recommencer"/>
+</uiandroid:UIAndroid>

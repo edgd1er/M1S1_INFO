@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiandroid:UIAndroid xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uiandroid="http:///uiandroid.ecore" main="//@affichages.0" paquetage="com.example.hello">
+  <affichages id="ecr_hello_1">
+    <root xsi:type="uiandroid:LinearLayout" orientation="vertical">
+      <layoutParams width="fill_parent" height="fill_parent"/>
+      <contenu xsi:type="uiandroid:Texte" id="texte_ecr1" texte="//@affichages.0/@valeursLocales.0">
+        <layoutParams width="fill_parent" height="wrap_content"/>
+      </contenu>
+      <contenu xsi:type="uiandroid:BoiteDeSaisie" id="bds1_ecr1" nom="valeurBoiteDeSaisie">
+        <layoutParams width="fill_parent" height="wrap_content"/>
+      </contenu>
+      <contenu xsi:type="uiandroid:Bouton" id="bouton1_ecr1" label="//@affichages.0/@valeursLocales.1">
+        <layoutParams width="wrap_content" height="wrap_content"/>
+        <actions xsi:type="uiandroid:ExécuterScript" id="" valeurCalculée="//@valeursGlobales.0" valeursParamètres="//@affichages.0/@root/@contenu.1" script="//@scriptsGlobaux.0"/>
+        <actions xsi:type="uiandroid:AfficherEcran" id="" écran="//@affichages.1"/>
+      </contenu>
+    </root>
+    <valeursLocales xsi:type="uiandroid:ValeurConstanteChaine" nom="texte1" valeur="Entrer le nom de la personne a saluer:"/>
+    <valeursLocales xsi:type="uiandroid:ValeurConstanteChaine" nom="labelBouton1" valeur="Saluer"/>
+  </affichages>
+  <affichages id="ecr_hello_2">
+    <root xsi:type="uiandroid:LinearLayout" orientation="vertical">
+      <layoutParams width="fill_parent" height="fill_parent"/>
+      <contenu xsi:type="uiandroid:Texte" id="txt1_ecr2" texte="//@valeursGlobales.0">
+        <layoutParams width="fill_parent" height="wrap_content"/>
+      </contenu>
+    </root>
+  </affichages>
+  <valeursGlobales xsi:type="uiandroid:ValeurCalculéeChaine" nom="ParamFromEcr1"/>
+  <scriptsGlobaux id="global_return_texte">
+    <corps>return &quot;Bonjour &quot; + texte + &quot;\n tu as construit ta première application Android&quot; ;</corps>
+    <paramètres id="texte"/>
+  </scriptsGlobaux>
+</uiandroid:UIAndroid>

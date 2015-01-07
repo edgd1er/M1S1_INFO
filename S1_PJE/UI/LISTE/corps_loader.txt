@@ -1,0 +1,28 @@
+// recherche la vue affichant la liste
+BookCollection books = new BookCollection();
+
+// list des objets
+java.util.List<java.util.Map<String, String>> ListOfBook = new java.util.ArrayList<java.util.Map<String, String>>();
+for (Book book : books.getBooks()) {
+	java.util.Map<String, String> bookMap = new java.util.HashMap<String, String>();
+
+	// ->script
+	bookMap.put("img", String.valueOf(R.drawable.ic_launcher));
+	// use available img
+	// ->script
+	bookMap.put("author", book.getAuthor());
+	bookMap.put("title", book.getTitle());
+	bookMap.put("isbn", book.getIsbn());
+	ListOfBook.add(bookMap);
+}
+
+// Cree un adapter faisant le lien entre la liste d'élément et la
+// ListView servant à l'affichage.
+SimpleAdapter listAdapter = new SimpleAdapter(this.getBaseContext(),
+		ListOfBook, 
+		layoutId, 
+		new String[] { "author", "title", "isbn" }, 
+		new int[] {	R.id.bookAuthor, R.id.bookTitle,R.id.bookIsbn });
+// Associe l’adapter et le ListView
+listView.setAdapter(listAdapter);
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiandroid:UIAndroid xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uiandroid="http:///uiandroid.ecore" main="//@affichages.0" paquetage="pje.palindrome">
+  <affichages id="ecran_principal">
+    <root xsi:type="uiandroid:LinearLayout" orientation="vertical">
+      <layoutParams width="fill_parent" height="fill_parent"/>
+      <contenu xsi:type="uiandroid:BoiteDeSaisie" id="boiteDeSaisie" nom="valeurBoiteDeSaisie">
+        <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="fill_parent" height="wrap_content" marginLeft=""/>
+      </contenu>
+      <contenu xsi:type="uiandroid:Bouton" id="boutonTest" label="//@valeursGlobales.0">
+        <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="wrap_content" height="wrap_content"/>
+        <actions xsi:type="uiandroid:ExécuterScript" id="calculerRéponse" valeurCalculée="//@valeursGlobales.1" valeursParamètres="//@affichages.0/@root/@contenu.0" script="//@affichages.0/@scriptsLocaux.0"/>
+        <actions xsi:type="uiandroid:AfficherEcran" écran="//@affichages.1"/>
+      </contenu>
+    </root>
+    <scriptsLocaux id="donneRéponsePalindrome">
+      <corps>if (!global.estPalindrome(texte)!) return texte+&quot; est un palindrome&quot;;</corps>
+      <corps>else return texte+&quot; n'est pas un palindrome&quot;;</corps>
+      <paramètres id="texte"/>
+    </scriptsLocaux>
+  </affichages>
+  <affichages id="ecran_secondaire">
+    <root xsi:type="uiandroid:LinearLayout" orientation="vertical">
+      <layoutParams width="fill_parent" height="fill_parent"/>
+      <contenu xsi:type="uiandroid:Texte" id="réponse" texte="//@valeursGlobales.1">
+        <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="wrap_content" height="wrap_content"/>
+      </contenu>
+      <contenu xsi:type="uiandroid:Bouton" id="boutonRetour" label="//@valeursGlobales.2">
+        <layoutParams xsi:type="uiandroid:LinearLayoutParams" width="wrap_content" height="wrap_content"/>
+        <actions xsi:type="uiandroid:AfficherEcran" écran="//@affichages.0"/>
+      </contenu>
+    </root>
+  </affichages>
+  <valeursGlobales xsi:type="uiandroid:ValeurConstanteChaine" nom="labelBoutonTest" valeur="Tester !"/>
+  <valeursGlobales xsi:type="uiandroid:ValeurCalculéeChaine" nom="valeurRéponse"/>
+  <valeursGlobales xsi:type="uiandroid:ValeurConstanteChaine" nom="labelBoutonRetour" valeur="Recommencer"/>
+  <scriptsGlobaux id="estPalindrome" type="boolean">
+    <corps>final String ponctuation = &quot; .,;!?'\&quot;-&quot;;
+
+int n = chaine.length();
+if (n&lt;=1) return true;
+else {
+	char g = chaine.charAt(0);
+	if (ponctuation.indexOf(g)!=-1) return !global.estPalindrome(chaine.substring(1,n))!;
+	char d = chaine.charAt(n-1);
+	if (ponctuation.indexOf(d)!=-1) return !global.estPalindrome(chaine.substring(0,n-1))!;
+	return g==d &amp;&amp; !global.estPalindrome(chaine.substring(1, n-1))!;
+}
+</corps>
+    <paramètres id="chaine"/>
+  </scriptsGlobaux>
+</uiandroid:UIAndroid>
