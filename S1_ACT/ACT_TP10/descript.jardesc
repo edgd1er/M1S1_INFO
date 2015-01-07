@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="ACT_TP10/ACT_TP10.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/ACT_TP10/descript.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" manifestLocation="/ACT_TP10/manifest.mf" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=ACT_TP10/src"/>
+        <folder path="/ACT_TP10/data"/>
+        <folder path="/ACT_TP10/lib"/>
+        <file path="/ACT_TP10/run_java.bat"/>
+        <file path="/ACT_TP10/run_java.sh"/>
+        <file path="/ACT_TP10/manifest.mf"/>
+    </selectedElements>
+</jardesc>

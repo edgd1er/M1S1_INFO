@@ -1,0 +1,782 @@
+Release 12.4 - xst M.81d (lin)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: roulette.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "roulette.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "roulette"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : roulette
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/X7seg.vhd" into library work
+Parsing entity <X7seg>.
+Parsing architecture <Behavioral> of entity <x7seg>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/shiftanodes.vhf" into library work
+Parsing entity <shiftanodes>.
+Parsing architecture <BEHAVIORAL> of entity <shiftanodes>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/Mux4x4.vhf" into library work
+Parsing entity <M4_1E_HXILINX_Mux4x4>.
+Parsing architecture <M4_1E_HXILINX_Mux4x4_V> of entity <m4_1e_hxilinx_mux4x4>.
+Parsing entity <Mux4x4>.
+Parsing architecture <BEHAVIORAL> of entity <mux4x4>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" into library work
+Parsing entity <CB4CE_HXILINX_enable190>.
+Parsing architecture <Behavioral> of entity <cb4ce_hxilinx_enable190>.
+Parsing entity <CB16CE_HXILINX_enable190>.
+Parsing architecture <Behavioral> of entity <cb16ce_hxilinx_enable190>.
+Parsing entity <enable190>.
+Parsing architecture <BEHAVIORAL> of entity <enable190>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/timer.vhd" into library work
+Parsing entity <timer>.
+Parsing architecture <xilinx> of entity <timer>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/shiftled.vhd" into library work
+Parsing entity <shiftled>.
+Parsing architecture <Behavioral> of entity <shiftled>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/rdm.vhd" into library work
+Parsing entity <rdm>.
+Parsing architecture <Behavioral> of entity <rdm>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/pulse.vhf" into library work
+Parsing entity <pulse>.
+Parsing architecture <BEHAVIORAL> of entity <pulse>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/fsm.vhd" into library work
+Parsing entity <fsm>.
+Parsing architecture <Behavioral> of entity <fsm>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/decodeur3_8.vhd" into library work
+Parsing entity <decodeur3_8>.
+Parsing architecture <Behavioral> of entity <decodeur3_8>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" into library work
+Parsing entity <CB4CE_HXILINX_afficheur>.
+Parsing architecture <Behavioral> of entity <cb4ce_hxilinx_afficheur>.
+Parsing entity <CB16CE_HXILINX_afficheur>.
+Parsing architecture <Behavioral> of entity <cb16ce_hxilinx_afficheur>.
+Parsing entity <M4_1E_HXILINX_afficheur>.
+Parsing architecture <M4_1E_HXILINX_afficheur_V> of entity <m4_1e_hxilinx_afficheur>.
+Parsing entity <CB2CE_HXILINX_afficheur>.
+Parsing architecture <Behavioral> of entity <cb2ce_hxilinx_afficheur>.
+Parsing entity <shiftanodes_MUSER_afficheur>.
+Parsing architecture <BEHAVIORAL> of entity <shiftanodes_muser_afficheur>.
+Parsing entity <enable190_MUSER_afficheur>.
+Parsing architecture <BEHAVIORAL> of entity <enable190_muser_afficheur>.
+Parsing entity <Mux4x4_MUSER_afficheur>.
+Parsing architecture <BEHAVIORAL> of entity <mux4x4_muser_afficheur>.
+Parsing entity <afficheur>.
+Parsing architecture <BEHAVIORAL> of entity <afficheur>.
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.vhd" into library work
+Parsing entity <roulette>.
+Parsing architecture <Behavioral> of entity <roulette>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <roulette> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shiftled> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <fsm> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/fsm.vhd" Line 56: output should be on the sensitivity list of the process
+
+Elaborating entity <pulse> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <enable190> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <CB16CE_HXILINX_enable190> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CB4CE_HXILINX_enable190> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" Line 138: Net <XLXI_2_CLR_openSignal> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" Line 139: Net <XLXI_3_CLR_openSignal> does not have a driver.
+
+Elaborating entity <decodeur3_8> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <rdm> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <afficheur> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <Mux4x4_MUSER_afficheur> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <M4_1E_HXILINX_afficheur> (architecture <M4_1E_HXILINX_afficheur_V>) from library <work>.
+INFO:HDLCompiler:679 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" Line 151. Case statement is complete. others clause is never selected
+
+Elaborating entity <CB2CE_HXILINX_afficheur> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <X7seg> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <enable190_MUSER_afficheur> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <CB16CE_HXILINX_afficheur> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CB4CE_HXILINX_afficheur> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" Line 282: Net <XLXI_2_CLR_openSignal> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" Line 283: Net <XLXI_3_CLR_openSignal> does not have a driver.
+
+Elaborating entity <shiftanodes_MUSER_afficheur> (architecture <BEHAVIORAL>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" Line 484: Net <XLXI_2_CLR_openSignal> does not have a driver.
+
+Elaborating entity <timer> (architecture <xilinx>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <roulette>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.vhd".
+WARNING:Xst:647 - Input <btn<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit comparator equal for signal <switches[7]_position[7]_equal_2_o> created at line 119
+    Summary:
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <roulette> synthesized.
+
+Synthesizing Unit <shiftled>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/shiftled.vhd".
+    Found 8-bit register for signal <count>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <shiftled> synthesized.
+
+Synthesizing Unit <fsm>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/fsm.vhd".
+    Found 1-bit register for signal <output>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <fsm> synthesized.
+
+Synthesizing Unit <pulse>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/pulse.vhf".
+    Summary:
+	no macro.
+Unit <pulse> synthesized.
+
+Synthesizing Unit <enable190>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf".
+    Set property "HU_SET = XLXI_2_11" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_12" for instance <XLXI_3>.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" line 193: Output port <Q> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" line 193: Output port <TC> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" line 201: Output port <CEO> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" line 201: Output port <Q0> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" line 201: Output port <Q1> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" line 201: Output port <Q3> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf" line 201: Output port <TC> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <XLXI_2_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_3_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <enable190> synthesized.
+
+Synthesizing Unit <CB16CE_HXILINX_enable190>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf".
+    Found 16-bit register for signal <COUNT>.
+    Found 16-bit adder for signal <COUNT[15]_GND_12_o_add_0_OUT> created at line 105.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CB16CE_HXILINX_enable190> synthesized.
+
+Synthesizing Unit <CB4CE_HXILINX_enable190>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/enable190.vhf".
+    Found 4-bit register for signal <COUNT>.
+    Found 4-bit adder for signal <COUNT[3]_GND_13_o_add_0_OUT> created at line 57.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CB4CE_HXILINX_enable190> synthesized.
+
+Synthesizing Unit <decodeur3_8>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/decodeur3_8.vhd".
+WARNING:Xst:647 - Input <A<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8x8-bit Read Only RAM for signal <D>
+    Summary:
+	inferred   1 RAM(s).
+Unit <decodeur3_8> synthesized.
+
+Synthesizing Unit <rdm>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/rdm.vhd".
+    Found 4-bit register for signal <count>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <rdm> synthesized.
+
+Synthesizing Unit <afficheur>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf".
+    Set property "HU_SET = XLXI_2_6" for instance <XLXI_2>.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" line 530: Output port <CEO> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" line 530: Output port <TC> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <XLXI_2_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <afficheur> synthesized.
+
+Synthesizing Unit <Mux4x4_MUSER_afficheur>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf".
+    Set property "HU_SET = XLXI_1_2" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_3" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_4" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_5" for instance <XLXI_4>.
+    Summary:
+	no macro.
+Unit <Mux4x4_MUSER_afficheur> synthesized.
+
+Synthesizing Unit <M4_1E_HXILINX_afficheur>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf".
+    Found 1-bit 4-to-1 multiplexer for signal <S1_D3_Mux_0_o> created at line 146.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <M4_1E_HXILINX_afficheur> synthesized.
+
+Synthesizing Unit <CB2CE_HXILINX_afficheur>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf".
+    Found 2-bit register for signal <COUNT>.
+    Found 2-bit adder for signal <COUNT[1]_GND_19_o_add_0_OUT> created at line 190.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CB2CE_HXILINX_afficheur> synthesized.
+
+Synthesizing Unit <X7seg>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/X7seg.vhd".
+    Found 16x7-bit Read Only RAM for signal <sevenseg>
+    Summary:
+	inferred   1 RAM(s).
+Unit <X7seg> synthesized.
+
+Synthesizing Unit <enable190_MUSER_afficheur>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf".
+    Set property "HU_SET = XLXI_2_0" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_1" for instance <XLXI_3>.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" line 337: Output port <Q> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" line 337: Output port <TC> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" line 345: Output port <CEO> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" line 345: Output port <Q0> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" line 345: Output port <Q1> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" line 345: Output port <Q3> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3010 - "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf" line 345: Output port <TC> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <XLXI_2_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_3_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <enable190_MUSER_afficheur> synthesized.
+
+Synthesizing Unit <CB16CE_HXILINX_afficheur>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf".
+    Found 16-bit register for signal <COUNT>.
+    Found 16-bit adder for signal <COUNT[15]_GND_22_o_add_0_OUT> created at line 105.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CB16CE_HXILINX_afficheur> synthesized.
+
+Synthesizing Unit <CB4CE_HXILINX_afficheur>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf".
+    Found 4-bit register for signal <COUNT>.
+    Found 4-bit adder for signal <COUNT[3]_GND_23_o_add_0_OUT> created at line 57.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CB4CE_HXILINX_afficheur> synthesized.
+
+Synthesizing Unit <shiftanodes_MUSER_afficheur>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/afficheur.vhf".
+    Summary:
+	no macro.
+Unit <shiftanodes_MUSER_afficheur> synthesized.
+
+Synthesizing Unit <timer>.
+    Related source file is "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/timer.vhd".
+    Summary:
+	no macro.
+Unit <timer> synthesized.
+RTL-Simplification CPUSTAT: 0.01 
+RTL-BasicInf CPUSTAT: 0.16 
+RTL-BasicOpt CPUSTAT: 0.00 
+RTL-Remain-Bus CPUSTAT: 0.03 
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 8x8-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 7
+ 16-bit adder                                          : 3
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 3
+# Registers                                            : 10
+ 1-bit register                                        : 1
+ 16-bit register                                       : 3
+ 2-bit register                                        : 1
+ 4-bit register                                        : 4
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 11
+ 1-bit 4-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CB16CE_HXILINX_afficheur>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <CB16CE_HXILINX_afficheur> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CB16CE_HXILINX_enable190>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <CB16CE_HXILINX_enable190> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CB2CE_HXILINX_afficheur>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <CB2CE_HXILINX_afficheur> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CB4CE_HXILINX_afficheur>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <CB4CE_HXILINX_afficheur> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CB4CE_HXILINX_enable190>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <CB4CE_HXILINX_enable190> synthesized (advanced).
+
+Synthesizing (advanced) Unit <X7seg>.
+INFO:Xst:3031 - HDL ADVISOR - The RAM <Mram_sevenseg> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sw>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <sevenseg>      |          |
+    -----------------------------------------------------------------------
+Unit <X7seg> synthesized (advanced).
+
+Synthesizing (advanced) Unit <decodeur3_8>.
+INFO:Xst:3031 - HDL ADVISOR - The RAM <Mram_D> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <A>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <D>             |          |
+    -----------------------------------------------------------------------
+Unit <decodeur3_8> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 8x8-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 7
+ 16-bit up counter                                     : 3
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+# Comparators                                          : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <roulette> ...
+
+Optimizing unit <pulse> ...
+
+Optimizing unit <CB2CE_HXILINX_afficheur> ...
+
+Optimizing unit <CB16CE_HXILINX_afficheur> ...
+
+Optimizing unit <CB4CE_HXILINX_afficheur> ...
+
+Optimizing unit <M4_1E_HXILINX_afficheur> ...
+
+Optimizing unit <CB16CE_HXILINX_enable190> ...
+
+Optimizing unit <CB4CE_HXILINX_enable190> ...
+
+Optimizing unit <shiftled> ...
+WARNING:Xst:2677 - Node <COUNT_3> of sequential type is unconnected in block <mon_afficheur/XLXI_4/XLXI_3>.
+WARNING:Xst:2677 - Node <COUNT_3> of sequential type is unconnected in block <mon_enable/XLXI_3>.
+WARNING:Xst:2677 - Node <COUNT_3> of sequential type is unconnected in block <shift_enable/XLXI_3>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block roulette, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 94
+ Flip-Flops                                            : 94
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : roulette.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 204
+#      AND3                        : 4
+#      GND                         : 4
+#      INV                         : 12
+#      LUT1                        : 45
+#      LUT2                        : 5
+#      LUT3                        : 4
+#      LUT4                        : 7
+#      LUT5                        : 10
+#      LUT6                        : 15
+#      MUXCY                       : 45
+#      MUXF7                       : 1
+#      VCC                         : 4
+#      XORCY                       : 48
+# FlipFlops/Latches                : 94
+#      FD                          : 13
+#      FDCE                        : 59
+#      FDE                         : 22
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 30
+#      IBUF                        : 10
+#      IBUFG                       : 1
+#      OBUF                        : 19
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# Logical                          : 3
+#      NOR2                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              94  out of  18224     0%  
+ Number of Slice LUTs:                   98  out of   9112     1%  
+    Number used as Logic:                98  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    118
+   Number with an unused Flip Flop:      24  out of    118    20%  
+   Number with an unused LUT:            20  out of    118    16%  
+   Number of fully used LUT-FF pairs:    74  out of    118    62%  
+   Number of unique control sets:        13
+
+IO Utilization: 
+ Number of IOs:                          31
+ Number of bonded IOBs:                  30  out of    232    12%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)       | Load  |
+-----------------------------------+-----------------------------+-------+
+clk                                | Inst_timer/dcm_sp_inst:CLK2X| 65    |
+clk                                | Inst_timer/dcm_sp_inst:CLKDV| 29    |
+-----------------------------------+-----------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.981ns (Maximum Frequency: 143.252MHz)
+   Minimum input arrival time before clock: 1.903ns
+   Maximum output required time after clock: 9.090ns
+   Maximum combinational path delay: 9.578ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.981ns (frequency: 143.252MHz)
+  Total number of paths / destination ports: 669 / 125
+-------------------------------------------------------------------------
+Delay:               3.490ns (Levels of Logic = 3)
+  Source:            mon_afficheur/XLXI_4/XLXI_2/COUNT_5 (FF)
+  Destination:       mon_afficheur/XLXI_4/XLXI_3/COUNT_0 (FF)
+  Source Clock:      clk rising 2.0X
+  Destination Clock: clk rising 2.0X
+
+  Data Path: mon_afficheur/XLXI_4/XLXI_2/COUNT_5 to mon_afficheur/XLXI_4/XLXI_3/COUNT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.981  COUNT_5 (COUNT_5)
+     LUT6:I0->O            1   0.203   0.684  COUNT[15]_PWR_22_o_equal_5_o<15>2 (COUNT[15]_PWR_22_o_equal_5_o<15>1)
+     LUT6:I4->O            3   0.203   0.650  COUNT[15]_PWR_22_o_equal_5_o<15>3 (CEO)
+     end scope: 'mon_afficheur/XLXI_4/XLXI_2'
+     begin scope: 'mon_afficheur/XLXI_4/XLXI_3'
+     FDCE:CE                   0.322          COUNT_0
+    ----------------------------------------
+    Total                      3.490ns (1.175ns logic, 2.315ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            btn<0> (PAD)
+  Destination:       btn0_pulse/XLXI_1 (FF)
+  Destination Clock: clk rising 2.0X
+
+  Data Path: btn<0> to btn0_pulse/XLXI_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btn_0_IBUF (btn_0_IBUF)
+     FDE:D                     0.102          btn0_pulse/XLXI_1
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 660 / 19
+-------------------------------------------------------------------------
+Offset:              9.090ns (Levels of Logic = 7)
+  Source:            Inst_rdm/count_3 (FF)
+  Destination:       sevenseg<6> (PAD)
+  Source Clock:      clk rising 2.0X
+
+  Data Path: Inst_rdm/count_3 to sevenseg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.447   1.247  Inst_rdm/count_3 (Inst_rdm/count_3)
+     LUT6:I0->O            1   0.203   0.924  afficheur_in<7>81 (afficheur_in<7>8)
+     LUT5:I0->O            1   0.203   0.000  afficheur_in<7>85_G (N1)
+     MUXF7:I1->O          16   0.140   1.349  afficheur_in<7>85 (afficheur_in<7>)
+     begin scope: 'mon_afficheur/XLXI_1/XLXI_2'
+     LUT6:I1->O            7   0.203   1.021  Mmux_O11 (O)
+     end scope: 'mon_afficheur/XLXI_1/XLXI_2'
+     LUT4:I0->O            1   0.203   0.579  mon_afficheur/XLXI_3/Mram_sevenseg111 (sevenseg_1_OBUF)
+     OBUF:I->O                 2.571          sevenseg_1_OBUF (sevenseg<1>)
+    ----------------------------------------
+    Total                      9.090ns (3.970ns logic, 5.119ns route)
+                                       (43.7% logic, 56.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1792 / 7
+-------------------------------------------------------------------------
+Delay:               9.578ns (Levels of Logic = 8)
+  Source:            switches<7> (PAD)
+  Destination:       sevenseg<6> (PAD)
+
+  Data Path: switches<7> to sevenseg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.961  switches_7_IBUF (switches_7_IBUF)
+     LUT6:I1->O            1   0.203   0.924  afficheur_in<7>81 (afficheur_in<7>8)
+     LUT5:I0->O            1   0.203   0.000  afficheur_in<7>85_G (N1)
+     MUXF7:I1->O          16   0.140   1.349  afficheur_in<7>85 (afficheur_in<7>)
+     begin scope: 'mon_afficheur/XLXI_1/XLXI_2'
+     LUT6:I1->O            7   0.203   1.021  Mmux_O11 (O)
+     end scope: 'mon_afficheur/XLXI_1/XLXI_2'
+     LUT4:I0->O            1   0.203   0.579  mon_afficheur/XLXI_3/Mram_sevenseg111 (sevenseg_1_OBUF)
+     OBUF:I->O                 2.571          sevenseg_1_OBUF (sevenseg<1>)
+    ----------------------------------------
+    Total                      9.578ns (4.745ns logic, 4.833ns route)
+                                       (49.5% logic, 50.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.750|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.08 secs
+ 
+--> 
+
+
+Total memory usage is 149908 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

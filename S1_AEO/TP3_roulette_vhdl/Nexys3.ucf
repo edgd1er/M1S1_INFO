@@ -1,0 +1,36 @@
+Net "LED<7>" LOC="T11";
+Net "LED<6>" LOC="R11";
+Net "LED<5>" LOC="N11";
+Net "LED<4>" LOC="M11";
+Net "LED<3>" LOC="V15";
+Net "LED<2>" LOC="U15";
+Net "LED<1>" LOC="V16";
+Net "LED<0>" LOC="U16";
+
+Net "sevenseg<6>" LOC="L14";
+Net "sevenseg<5>" LOC="N14";
+Net "sevenseg<4>" LOC="M14";
+Net "sevenseg<3>" LOC="U18";
+Net "sevenseg<2>" LOC="U17";
+Net "sevenseg<1>" LOC="T18";
+Net "sevenseg<0>" LOC="T17";
+
+Net "anodes<0>" LOC="N16";
+Net "anodes<0>" LOC="N15";
+Net "anodes<0>" LOC="P18";
+Net "anodes<0>" LOC="P17";
+
+Net "SW<0>" LOC="T10";
+Net "SW<1>" LOC="T9";
+Net "SW<2>" LOC="V9";
+Net "SW<3>" LOC="M8";
+Net "SW<4>" LOC="N8";
+Net "SW<5>" LOC="U8";
+Net "SW<6>" LOC="V8";
+Net "SW<7>" LOC="T5";
+
+NET "clk" LOC = "V10";
+
+NET "btn(0)" LOC = "D9";
+NET "btn(1)" LOC = "C9";
+NET "btn(2)" LOC = "B8";

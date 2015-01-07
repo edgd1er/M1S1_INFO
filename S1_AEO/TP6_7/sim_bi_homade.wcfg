@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/Documents_utilisateurs/Francois/_Hubic/Documents/Formation/S1_AEO/TP3_Homade/masterbench_isim_beh1.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bip_usecase_utils_pkg_v2_0" />
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="c_addsub_pkg_v11_0" />
+            <top_module name="c_reg_fd_v11_0_comp" />
+            <top_module name="ipcodes" />
+            <top_module name="masterbench" />
+            <top_module name="mult_gen_pkg_v11_2" />
+            <top_module name="numeric_std" />
+            <top_module name="opcodes" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+            <top_module name="xbip_addsub_v2_0_comp" />
+            <top_module name="xbip_pipe_v2_0_xst_comp" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/masterbench/mclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mclk</obj_property>
+      <obj_property name="ObjectShortName">mclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/master" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">master</obj_property>
+      <obj_property name="ObjectShortName">master</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/rx_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rx_out</obj_property>
+      <obj_property name="ObjectShortName">rx_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/btn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">btn[4:0]</obj_property>
+      <obj_property name="ObjectShortName">btn[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/sw" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sw[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sw[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/count" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">count</obj_property>
+      <obj_property name="ObjectShortName">count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/nb_master" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nb_master</obj_property>
+      <obj_property name="ObjectShortName">nb_master</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/nb_slave" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nb_slave</obj_property>
+      <obj_property name="ObjectShortName">nb_slave</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/nbit" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nbit</obj_property>
+      <obj_property name="ObjectShortName">nbit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/rstfsm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rstfsm</obj_property>
+      <obj_property name="ObjectShortName">rstfsm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/data_buff" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_buff[63:0]</obj_property>
+      <obj_property name="ObjectShortName">data_buff[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/finish" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">finish</obj_property>
+      <obj_property name="ObjectShortName">finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/ens" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ens</obj_property>
+      <obj_property name="ObjectShortName">ens</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/last" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">last</obj_property>
+      <obj_property name="ObjectShortName">last</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/HoMade/\xslaves(1)\/\yslaves(0)\/One_salve/HCU_Slave/ins" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ins[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/HoMade/\xslaves(0)\/\yslaves(0)\/One_salve/HCU_Slave/ins" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ins[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/masterbench/HoMade/HCU_Master/ins" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ins[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

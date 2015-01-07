@@ -1,0 +1,10 @@
+sch2sym -intstyle ise -family spartan6 -refsym afficheur /home/m1/sommerard/Documents/AEO/Roulette/afficheur.sch /home/m1/sommerard/Documents/AEO/Roulette/afficheur.sym 
+sch2hdl -sympath /home/m1/sommerard/Documents/AEO/Roulette/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl afficheur_drc.vhf -w /home/m1/sommerard/Documents/AEO/Roulette/afficheur.sch 
+sch2sym -intstyle ise -family spartan6 -refsym afficheur /home/m1/sommerard/Documents/AEO/Roulette/afficheur.sch /home/m1/sommerard/Documents/AEO/Roulette/afficheur.sym 
+sch2hdl -sympath /home/m1/sommerard/Documents/AEO/Roulette/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl afficheur_drc.vhf -w /home/m1/sommerard/Documents/AEO/Roulette/afficheur.sch 
+sch2sym -intstyle ise -family spartan6 -refsym afficheur C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sch C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sym 
+sch2sym -intstyle ise -family spartan6 -refsym afficheur C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sch C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sym 
+sch2hdl -sympath C:/Users/Romain/Desktop/ASE/Roulette/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl afficheur_drc.vhf -w C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sch 
+sch2sym -intstyle ise -family spartan6 -refsym afficheur C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sch C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sym 
+sch2sym -intstyle ise -family spartan6 -refsym afficheur C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sch C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sym 
+sch2sym -intstyle ise -family spartan6 -refsym afficheur C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sch C:/Users/Romain/Desktop/ASE/Roulette/afficheur.sym 

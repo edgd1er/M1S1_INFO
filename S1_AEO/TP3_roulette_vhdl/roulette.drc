@@ -1,0 +1,11 @@
+Release 12.4 Drc M.81d (lin)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Fri Oct 17 12:13:23 2014
+
+drc -z roulette.ncd roulette.pcf
+
+WARNING:PhysDesignRules:367 - The signal <btn<2>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

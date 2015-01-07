@@ -1,0 +1,35 @@
+//! **************************************************************************
+// Written by: Map M.81d on Thu Oct 09 07:53:51 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SW<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "btn0" LOCATE = SITE "D9" LEVEL 1;
+COMP "btn1" LOCATE = SITE "C9" LEVEL 1;
+COMP "SW<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "btn2" LOCATE = SITE "B8" LEVEL 1;
+COMP "SW<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "SW<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "SW<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "SW<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "SW<7>" LOCATE = SITE "T5" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "sevenseg<0>" LOCATE = SITE "T17" LEVEL 1;
+COMP "sevenseg<1>" LOCATE = SITE "T18" LEVEL 1;
+COMP "sevenseg<2>" LOCATE = SITE "U17" LEVEL 1;
+COMP "sevenseg<3>" LOCATE = SITE "U18" LEVEL 1;
+COMP "anodes<0>" LOCATE = SITE "P17" LEVEL 1;
+COMP "sevenseg<4>" LOCATE = SITE "M14" LEVEL 1;
+COMP "sevenseg<5>" LOCATE = SITE "N14" LEVEL 1;
+COMP "sevenseg<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "SW<0>" LOCATE = SITE "T10" LEVEL 1;
+SCHEMATIC END;
+

@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: com.heuristique.tests.TestBinPack
+Class-Path: lib/jopt-simple-4.8.jar

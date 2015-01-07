@@ -1,0 +1,1 @@
+vhdtdtfi -prj roulette_vhdl -o /home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/fsm.vhi -lib work /home/m1/dubiez/Documents/AEO_TP/roulette_vhdl//fsm.vhd -module fsm -template /usr/local/Xilinx/12.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 

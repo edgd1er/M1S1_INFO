@@ -1,0 +1,6 @@
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl rdm_drc.vhf -w /home/m1/sommerard/Documents/AEO/Roulette/rdm.sch 
+sch2sym -intstyle ise -family spartan6 -refsym rdm /home/m1/sommerard/Documents/AEO/Roulette/rdm.sch /home/m1/sommerard/Documents/AEO/Roulette/rdm.sym 
+sch2sym -intstyle ise -family spartan6 -refsym rdm /home/m1/sommerard/Documents/AEO/Roulette/rdm.sch /home/m1/sommerard/Documents/AEO/Roulette/rdm.sym 
+sch2sym -intstyle ise -family spartan6 -refsym rdm C:/Users/Romain/Desktop/ASE/Roulette/rdm.sch C:/Users/Romain/Desktop/ASE/Roulette/rdm.sym 
+sch2hdl -sympath C:/Users/Romain/Desktop/ASE/Roulette/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl rdm_drc.vhf -w C:/Users/Romain/Desktop/ASE/Roulette/rdm.sch 
+sch2sym -intstyle ise -family spartan6 -refsym rdm C:/Users/Romain/Desktop/ASE/Roulette/rdm.sch C:/Users/Romain/Desktop/ASE/Roulette/rdm.sym 

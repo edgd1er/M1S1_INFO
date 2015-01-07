@@ -6,9 +6,9 @@ import java.util.Random;
 import com.heuristique.EnumerationOnline;
 import com.heuristique.EnumerationTriee;
 import com.heuristique.PblBinPack;
-import com.heuristique.SolutionWalkerBinPackBF;
-import com.heuristique.SolutionWalkerBinPackFF;
-import com.heuristique.SolutionWalkerBinPackNF;
+import com.heuristique.SolutionWalker.SolutionWalkerBinPackBF;
+import com.heuristique.SolutionWalker.SolutionWalkerBinPackFF;
+import com.heuristique.SolutionWalker.SolutionWalkerBinPackNF;
 import com.heuristique.interfaces.EnumerationObjets;
 import com.heuristique.tools.OSDetector;
 
@@ -25,7 +25,7 @@ public class TestBinPack {
 
 		/* definition du jeu de donnees */
 		boolean sorted = false;
-		String sortedString = "Elements non triés";
+		String sortedString = "Elements non tries";
 
 		OptionParser parser = new OptionParser("d:nbfth");
 		OptionSet options = parser.parse(args);
@@ -39,7 +39,7 @@ public class TestBinPack {
 		}
 
 		if (options.has("t")) {
-			sortedString = "Elements triés";
+			sortedString = "Elements tries";
 			sorted = true;
 		}
 
@@ -47,7 +47,7 @@ public class TestBinPack {
 			usage();
 		}
 
-		/* chargement des donnï¿½es */
+		/* chargement des donnees */
 		if (OSDetector.isWindows()) {
 			file = file.replace("\\", File.separator);
 		}
@@ -78,7 +78,7 @@ public class TestBinPack {
 		
 		if (!sorted)
 		{
-			/* mise en desordre de la liste de poids car elle est deja triée */
+			/* mise en desordre de la liste de poids car elle est deja triï¿½e */
 			
 			shuffleArray(TestpbBpNF.poids);
 			en = new EnumerationOnline(TestpbBpNF.poids);
@@ -90,7 +90,7 @@ public class TestBinPack {
 		
 		SolutionWalkerBinPackFF sol = new SolutionWalkerBinPackFF(TestpbBpNF,en);
 
-		System.out.println("\nFirstFit " +  (sorted?"triée":"non triée")+ ", fichier: "+ file );
+		System.out.println("\nFirstFit " +  (sorted?"triee":"non triee")+ ", fichier: "+ file );
 
 		while (!sol.Current().Complete()) {
 			sol.NextPartialSolution();
@@ -109,8 +109,7 @@ public class TestBinPack {
 		
 		if (!sorted)
 		{
-			/* mise en desordre de la liste de poids car elle est deja triée */
-			
+			/* mise en desordre de la liste de poids car elle est deja triï¿½e */
 			shuffleArray(TestpbBpNF.poids);
 			 en = new EnumerationOnline(TestpbBpNF.poids);
 		}
@@ -121,7 +120,7 @@ public class TestBinPack {
 		
 		SolutionWalkerBinPackBF sol = new SolutionWalkerBinPackBF(TestpbBpNF,en);
 
-		System.out.println("\nBestFit " +  (sorted?"triée":"non triée")+ ", fichier: "+ file );
+		System.out.println("\nBestFit " +  (sorted?"triee":"non triee")+ ", fichier: "+ file );
 
 		/* while (!sol.Current().Complete()) */
 		while (!sol.Terminated()) {
@@ -150,7 +149,7 @@ public class TestBinPack {
 
 		if (!sorted)
 		{
-			/* mise en desordre de la liste de poids car elle est deja triée */
+			/* mise en desordre de la liste de poids car elle est deja triï¿½e */
 			
 			shuffleArray(TestpbBpNF.poids);
 			 en = new EnumerationOnline(TestpbBpNF.poids);
@@ -163,7 +162,7 @@ public class TestBinPack {
 		SolutionWalkerBinPackNF sol = new SolutionWalkerBinPackNF(TestpbBpNF,
 				en);
 
-		System.out.println("\nNextFit " +  (sorted?"triée":"non triée")+ ", fichier: "+ file );
+		System.out.println("\nNextFit " +  (sorted?"triee":"non triee")+ ", fichier: "+ file );
 
 		/* while (!sol.Current().Complete()) */
 		while (!sol.Terminated()) {
@@ -171,9 +170,10 @@ public class TestBinPack {
 			// if ((++i%10)==0)sol.Current().Display();
 		}
 		sol.Current().Display();
+		System.out.println("\nSol Partielle finie: " + sol.Terminated());
 	}
 
-	// Implementing Fisher–Yates shuffle
+	// Implementing Fisherï¿½Yates shuffle
 	static void shuffleArray(int[] ar) {
 		Random rnd = new Random();
 		for (int i = ar.length - 1; i > 0; i--) {

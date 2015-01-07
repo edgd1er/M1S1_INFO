@@ -1,0 +1,73 @@
+  @_0:          @_3c CALL
+                HALT
+  @_4:          @_0 CALL
+                HALT
+                0 1 short 202 IP /* XNUM */
+                1 LIT
+                2 1 short 36 IP /* EQ */
+                1 0 short 0 IP /* NOPorPOP */
+                @_3c BZ
+                0 1 short 10 IP /* IP_10 */
+                0 LIT
+                10 LIT
+                2 1 short 2d IP /* SHIFTLIT */
+                0 LIT
+                1 0 short 7 IP /* DATAPUSH */
+                1 0 short 7 IP /* DATAPUSH */
+                0 1 short 10 IP /* IP_10 */
+                0 1 short 10 IP /* IP_10 */
+                1 2 short 8 IP /* DUP */
+                fff LIT
+                2 1 short 25 IP /* AND */
+                2 2 short 9 IP /* IP_9 */
+                14 LIT
+                2 1 short 2b IP /* RSHIFT */
+                fff LIT
+                2 1 short 25 IP /* AND */
+                1 2 short 8 IP /* DUP */
+                2 1 short 14 IP /* IP_14 */
+                2 2 short 9 IP /* IP_9 */
+                1 2 short 8 IP /* DUP */
+                2 1 short 14 IP /* IP_14 */
+                2 1 short 20 IP /* ADD */
+                1 LIT
+                ffe LIT
+                2 1 short 2d IP /* SHIFTLIT */
+                2 1 short 3c IP /* REGLOAD 0 */
+                1 0 short 0 IP /* NOPorPOP */
+                @_5c BZ
+                1 1 short 22 IP /* INC */
+                0 1 short 6 IP /* DATAPOP */
+                1 1 short 23 IP /* DEC */
+                0 0 short 7 IP /* DATAPUSH */
+                1 1 short 33 IP /* IP_33 */
+                1 0 short 0 IP /* NOPorPOP */
+                @_42 BZ
+                0 0 short 6 IP /* DATAPOP */
+                0 0 short 6 IP /* DATAPOP */
+                RET
+  @_3c:         RET
+#master
+                @_24 BA
+  @_4:          1 0 short 2 IP /* BUFFOUT */
+                1f LIT
+                1 0 long 402 IP /* IP_402 */
+                RET
+  @_8:          1 LIT
+                1 0 short 3 IP /* LED */
+                0 0 short 1f3 IP /* IP_1f3 */
+                @_4 SPMD
+                WAIT
+                0 1 short 12 IP /* S2M */
+                @_4 CALL
+                0 0 short 1fa IP /* IP_1fa */
+                0 1 short 12 IP /* S2M */
+                @_4 CALL
+                0 0 short 1fa IP /* IP_1fa */
+                0 1 short 12 IP /* S2M */
+                @_4 CALL
+                0 LIT
+                1 0 short 3 IP /* LED */
+                RET
+  @_24:         @_8 CALL
+                HALT

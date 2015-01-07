@@ -1,0 +1,5 @@
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl shiftanodes_drc.vhf -w /home/m1/sommerard/Documents/AEO/Roulette/shiftanodes.sch 
+sch2sym -intstyle ise -family spartan6 -refsym shiftanodes /home/m1/sommerard/Documents/AEO/Roulette/shiftanodes.sch /home/m1/sommerard/Documents/AEO/Roulette/shiftanodes.sym 
+sch2sym -intstyle ise -family spartan6 -refsym shiftanodes C:/Users/Romain/Desktop/ASE/Roulette/shiftanodes.sch C:/Users/Romain/Desktop/ASE/Roulette/shiftanodes.sym 
+sch2hdl -sympath C:/Users/Romain/Desktop/ASE/Roulette/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl shiftanodes_drc.vhf -w C:/Users/Romain/Desktop/ASE/Roulette/shiftanodes.sch 
+sch2sym -intstyle ise -family spartan6 -refsym shiftanodes C:/Users/Romain/Desktop/ASE/Roulette/shiftanodes.sch C:/Users/Romain/Desktop/ASE/Roulette/shiftanodes.sym 

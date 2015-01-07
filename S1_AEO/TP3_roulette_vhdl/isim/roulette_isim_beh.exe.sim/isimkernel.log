@@ -1,0 +1,29 @@
+Command line:
+   roulette_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54020
+
+Fri Oct 17 10:39:15 2014
+
+
+ Elaboration Time: 0.01 sec
+
+ Current Memory Usage: 115.45 Meg
+
+ Total Signals          : 6
+ Total Nets             : 31
+ Total Signal Drivers   : 3
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 0
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 391
+Total Line Count : 0
+
+ Total Simulation Time: 0.01 sec
+
+ Current Memory Usage: 122.798 Meg
+
+Fri Oct 17 10:39:20 2014
+

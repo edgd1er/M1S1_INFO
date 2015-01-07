@@ -1,0 +1,2 @@
+sch2hdl -sympath /home/m1/sommerard/Documents/AEO/Roulette/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl mux2x8_drc.vhf -w /home/m1/sommerard/Documents/AEO/Roulette/mux2x8.sch 
+sch2sym -intstyle ise -family spartan6 -refsym mux2x8 /home/m1/sommerard/Documents/AEO/Roulette/mux2x8.sch /home/m1/sommerard/Documents/AEO/Roulette/mux2x8.sym 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.ncd
+OUTFILE=/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl
+LICENSE=WebPack
+USER_INFO=0_0_579

@@ -1,0 +1,27 @@
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm rdm.bmm -p xc6slx16-csg324-3 roulette.ngc roulette.ngd  
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 roulette.ngc roulette.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o roulette_map.ncd roulette.ngd roulette.pcf 
+par -w -intstyle ise -ol high -mt off roulette_map.ncd roulette.ncd roulette.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml roulette.twx roulette.ncd -o roulette.twr roulette.pcf -ucf Nexys3.ucf 
+bitgen -intstyle ise -f roulette.ut roulette.ncd 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 roulette.ngc roulette.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o roulette_map.ncd roulette.ngd roulette.pcf 
+par -w -intstyle ise -ol high -mt off roulette_map.ncd roulette.ncd roulette.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml roulette.twx roulette.ncd -o roulette.twr roulette.pcf -ucf Nexys3.ucf 
+bitgen -intstyle ise -f roulette.ut roulette.ncd 
+xst -intstyle ise -ifn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.xst" -ofn "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/roulette.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 roulette.ngc roulette.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o roulette_map.ncd roulette.ngd roulette.pcf 
+par -w -intstyle ise -ol high -mt off roulette_map.ncd roulette.ncd roulette.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml roulette.twx roulette.ncd -o roulette.twr roulette.pcf -ucf Nexys3.ucf 
+bitgen -intstyle ise -f roulette.ut roulette.ncd 

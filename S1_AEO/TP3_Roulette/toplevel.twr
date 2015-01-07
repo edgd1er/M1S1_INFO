@@ -1,0 +1,105 @@
+--------------------------------------------------------------------------------
+Release 12.4 Trace  (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml toplevel.twx toplevel.ncd -o toplevel.twr toplevel.pcf
+-ucf Nexys3.ucf
+
+Design file:              toplevel.ncd
+Physical constraint file: toplevel.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.15 2010-12-02)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+SW<0>       |    8.070(R)|      SLOW  |   -3.622(R)|      FAST  |clk100            |   0.000|
+SW<1>       |    8.850(R)|      SLOW  |   -4.151(R)|      FAST  |clk100            |   0.000|
+SW<2>       |    8.569(R)|      SLOW  |   -3.900(R)|      FAST  |clk100            |   0.000|
+SW<3>       |    8.957(R)|      SLOW  |   -4.178(R)|      FAST  |clk100            |   0.000|
+SW<4>       |    8.552(R)|      SLOW  |   -3.920(R)|      FAST  |clk100            |   0.000|
+SW<5>       |    9.068(R)|      SLOW  |   -4.280(R)|      FAST  |clk100            |   0.000|
+SW<6>       |    8.616(R)|      SLOW  |   -3.970(R)|      FAST  |clk100            |   0.000|
+SW<7>       |    8.703(R)|      SLOW  |   -4.070(R)|      FAST  |clk100            |   0.000|
+btn0        |    5.915(R)|      SLOW  |   -3.676(R)|      FAST  |clk100            |   0.000|
+btn1        |    5.475(R)|      SLOW  |   -3.321(R)|      FAST  |clk100            |   0.000|
+btn2        |    5.379(R)|      SLOW  |   -3.268(R)|      FAST  |clk100            |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+anodes<0>   |         4.353(R)|      SLOW  |         2.546(R)|      FAST  |clk100            |   0.000|
+anodes<1>   |         4.082(R)|      SLOW  |         2.350(R)|      FAST  |clk100            |   0.000|
+anodes<2>   |         3.769(R)|      SLOW  |         2.143(R)|      FAST  |clk100            |   0.000|
+anodes<3>   |         3.837(R)|      SLOW  |         2.171(R)|      FAST  |clk100            |   0.000|
+led<0>      |         6.700(R)|      SLOW  |         2.933(R)|      FAST  |clk100            |   0.000|
+            |         5.137(R)|      SLOW  |         3.076(R)|      FAST  |clk3              |   0.000|
+led<1>      |         7.174(R)|      SLOW  |         2.954(R)|      FAST  |clk100            |   0.000|
+            |         5.096(R)|      SLOW  |         2.969(R)|      FAST  |clk3              |   0.000|
+led<2>      |         6.736(R)|      SLOW  |         2.930(R)|      FAST  |clk100            |   0.000|
+            |         5.128(R)|      SLOW  |         3.019(R)|      FAST  |clk3              |   0.000|
+led<3>      |         6.971(R)|      SLOW  |         3.426(R)|      FAST  |clk100            |   0.000|
+            |         5.071(R)|      SLOW  |         2.957(R)|      FAST  |clk3              |   0.000|
+led<4>      |         6.651(R)|      SLOW  |         2.757(R)|      FAST  |clk100            |   0.000|
+            |         4.796(R)|      SLOW  |         2.676(R)|      FAST  |clk3              |   0.000|
+led<5>      |         6.244(R)|      SLOW  |         2.626(R)|      FAST  |clk100            |   0.000|
+            |         4.298(R)|      SLOW  |         2.414(R)|      FAST  |clk3              |   0.000|
+led<6>      |         6.435(R)|      SLOW  |         2.873(R)|      FAST  |clk100            |   0.000|
+            |         4.728(R)|      SLOW  |         2.687(R)|      FAST  |clk3              |   0.000|
+led<7>      |         6.562(R)|      SLOW  |         2.731(R)|      FAST  |clk100            |   0.000|
+            |         4.548(R)|      SLOW  |         2.601(R)|      FAST  |clk3              |   0.000|
+sevenseg<0> |         6.120(R)|      SLOW  |         2.887(R)|      FAST  |clk100            |   0.000|
+sevenseg<1> |         5.792(R)|      SLOW  |         2.629(R)|      FAST  |clk100            |   0.000|
+sevenseg<2> |         6.037(R)|      SLOW  |         2.970(R)|      FAST  |clk100            |   0.000|
+sevenseg<3> |         6.281(R)|      SLOW  |         2.977(R)|      FAST  |clk100            |   0.000|
+sevenseg<4> |         6.353(R)|      SLOW  |         3.082(R)|      FAST  |clk100            |   0.000|
+sevenseg<5> |         6.259(R)|      SLOW  |         3.095(R)|      FAST  |clk100            |   0.000|
+sevenseg<6> |         6.264(R)|      SLOW  |         3.001(R)|      FAST  |clk100            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.008|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Thu Oct 09 07:54:05 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 213 MB
+
+
+

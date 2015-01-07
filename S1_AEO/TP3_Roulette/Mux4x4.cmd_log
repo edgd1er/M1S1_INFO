@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan6 -refsym Mux4x4 C:/Users/Romain/Desktop/ASE/Roulette/Mux4x4.sch C:/Users/Romain/Desktop/ASE/Roulette/Mux4x4.sym 
+sch2hdl -sympath C:/Users/Romain/Desktop/ASE/Roulette/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl Mux4x4_drc.vhf -w C:/Users/Romain/Desktop/ASE/Roulette/Mux4x4.sch 
+sch2sym -intstyle ise -family spartan6 -refsym Mux4x4 C:/Users/Romain/Desktop/ASE/Roulette/Mux4x4.sch C:/Users/Romain/Desktop/ASE/Roulette/Mux4x4.sym 

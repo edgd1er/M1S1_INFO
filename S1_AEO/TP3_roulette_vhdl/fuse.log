@@ -1,0 +1,26 @@
+Running: /usr/local/Xilinx/12.4/ISE_DS/ISE/bin/lin/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/pulse_isim_beh.exe -prj /home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/pulse_beh.prj work.pulse 
+ISim M.81d (signature 0x141a37e9)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/pulse.vhf" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 35160 KB
+Fuse CPU Usage: 180 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package numeric_std from library ieee
+Compiling package vcomponents
+Compiling architecture fde_v of entity fde [\FDE('0')\]
+Compiling architecture fd_v of entity fd [\FD('0')\]
+Compiling architecture and3_v of entity and3 [and3_default]
+Compiling architecture inv_v of entity inv [inv_default]
+Compiling architecture behavioral of entity pulse
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 13 VHDL Units
+Built simulation executable /home/m1/dubiez/Documents/AEO_TP/roulette_vhdl/pulse_isim_beh.exe
+Fuse Memory Usage: 76164 KB
+Fuse CPU Usage: 200 ms
+GCC CPU Usage: 300 ms

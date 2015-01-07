@@ -1,0 +1,6 @@
+sch2sym -intstyle ise -family spartan6 -refsym pulse /home/m1/sommerard/Documents/AEO/Roulette/pulse.sch /home/m1/sommerard/Documents/AEO/Roulette/pulse.sym 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl pulse_drc.vhf -w /home/m1/sommerard/Documents/AEO/Roulette/pulse.sch 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl pulse_drc.vhf -w /home/m1/sommerard/Documents/AEO/Roulette/pulse.sch 
+sch2sym -intstyle ise -family spartan6 -refsym pulse /home/m1/sommerard/Documents/AEO/Roulette/pulse.sch /home/m1/sommerard/Documents/AEO/Roulette/pulse.sym 
+sch2hdl -sympath C:/Users/Romain/Desktop/ASE/Roulette/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl pulse_drc.vhf -w C:/Users/Romain/Desktop/ASE/Roulette/pulse.sch 
+sch2sym -intstyle ise -family spartan6 -refsym pulse C:/Users/Romain/Desktop/ASE/Roulette/pulse.sch C:/Users/Romain/Desktop/ASE/Roulette/pulse.sym 

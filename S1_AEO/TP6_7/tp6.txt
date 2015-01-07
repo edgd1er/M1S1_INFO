@@ -1,0 +1,20 @@
+gforth hasmV5.fs  test_led.fsh -e bye
+ne fonctionne pas.
+
+gforth hasmV5prim.fs  test_led.fsh -e bye
+produit les deux parties du programme pour homade. La partie maitre (homade.hmd ) et la partie esclave (homade.shmd) qu'il faut concatener avec:
+
+	cat homade.shmd >> homade.hmd
+
+chargement du pgm
+ 	java -jar /opt/jHomade/jhomade-2.1.jar  -p /dev/ttyUSB0 homade.hmd 
+
+
+lit 4 nombres de 8 bits
+les place sur la pile
+crée 2 nombres de 16 bit par concaténation Poids Forts / Poids Faibles,
+somme + afficheur 7 segments.
+Vous pourrez utiliser une fonction pour la saisie d’un mot de 8 bits et une boucle qui l’appelle 4 fois.
+
+#lancement de la compilation.
+hmd  hasmV5 test_led.fsh

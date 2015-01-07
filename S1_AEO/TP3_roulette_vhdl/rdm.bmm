@@ -1,0 +1,26 @@
+entity rdm is
+ Port ( clk : in STD_LOGIC;
+         E : in STD_LOGIC;
+         Q : out STD_LOGIC_VECTOR (3 downto 0));
+end rdm;
+
+signal count : std_logic_vector (3 downto 0):="0001";
+
+signal LF : std_logic;
+
+architecture Behavioral of rdm is
+signal count : std_logic_vector (3 downto 0):="0001";
+signal LF : std_logic;
+begin
+     LF <= count(3) xor count(2);
+     process (clk)
+     begin
+         if clk'event and clk='1' then
+              if E='1' then
+              count <= count(2) & count(1) & count(0) & LF;
+              end if;
+         end if;
+     end process;
+     Q<= count;
+end Behavioral;
+

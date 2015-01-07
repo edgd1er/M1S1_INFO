@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Romain\Desktop\ASE\Roulette\toplevel.ncd
+OUTFILE=C:\Users\Romain\Desktop\ASE\Roulette\toplevel.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Romain\Desktop\ASE\Roulette
+LICENSE=WebPack
+USER_INFO=0_0_171
