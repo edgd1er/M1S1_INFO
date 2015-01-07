@@ -16,14 +16,10 @@ public class PblBinPack extends Pbl{
 	private int nb_sacs;
 	
 	public PblBinPack(String file){
-<<<<<<< HEAD
 		if (!loadDonnee(file))
 			{
 			System.out.println("\nErreur, le fichier de donnée "+file + " n'a pu être chargé");
 			System.exit(-1);}
-=======
-		loadDonnee(file);
->>>>>>> 6316d26d5f47197e848e167d95859d1b4b9ff882
 	}
 	
 	public PblBinPack(int n, int p[], int c, int nbs ){

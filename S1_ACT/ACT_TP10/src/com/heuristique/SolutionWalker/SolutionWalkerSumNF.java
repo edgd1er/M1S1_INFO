@@ -47,11 +47,7 @@ public class SolutionWalkerSumNF extends SolutionWalkerSum {
 				if (nextone< mysolPartial.getCap())
 				{
 					mysolPartial.ASac.add(nextone);
-<<<<<<< HEAD
 					System.out.println("Ajout de l'objet: " + nextone); 
-					
-=======
->>>>>>> 6316d26d5f47197e848e167d95859d1b4b9ff882
 				}
 			}
 			
@@ -59,11 +55,7 @@ public class SolutionWalkerSumNF extends SolutionWalkerSum {
 				int currentpoids = mysolPartial.ASac.get(j);
 				if (currentpoids + nextone <= mysolPartial.getCap()) {
 					mysolPartial.ASac.set(j, currentpoids + nextone);
-<<<<<<< HEAD
-					System.out.println("Ajout de l'objet: " + nextone); 
-=======
 					System.out.println("\nAjout de l'objet: " + nextone); 
->>>>>>> 6316d26d5f47197e848e167d95859d1b4b9ff882
 					found = true;
 					break;
 				}
