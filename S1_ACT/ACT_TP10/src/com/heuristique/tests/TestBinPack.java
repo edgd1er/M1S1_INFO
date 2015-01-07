@@ -110,6 +110,10 @@ public class TestBinPack {
 		if (!sorted)
 		{
 			/* mise en desordre de la liste de poids car elle est deja tri�e */
+<<<<<<< HEAD
+=======
+			
+>>>>>>> 6316d26d5f47197e848e167d95859d1b4b9ff882
 			shuffleArray(TestpbBpNF.poids);
 			 en = new EnumerationOnline(TestpbBpNF.poids);
 		}
@@ -170,7 +174,10 @@ public class TestBinPack {
 			// if ((++i%10)==0)sol.Current().Display();
 		}
 		sol.Current().Display();
+<<<<<<< HEAD
 		System.out.println("\nSol Partielle finie: " + sol.Terminated());
+=======
+>>>>>>> 6316d26d5f47197e848e167d95859d1b4b9ff882
 	}
 
 	// Implementing Fisher�Yates shuffle

@@ -86,8 +86,12 @@ public class PartialSolutionBinPack implements PartialSolution {
 						"\nCapacité du sac: " + this.cap +
 						"\nNombre de sacs: " + ASac.size() +
 						"\nRemplissage du sac courant: " + currentsac;
+<<<<<<< HEAD
 
 		result+="\n";
+=======
+				
+>>>>>>> 6316d26d5f47197e848e167d95859d1b4b9ff882
 		for (Integer integer : ASac) {
 			result += "\"sac["+i++ + "]=" + integer +", ";			
 		}
